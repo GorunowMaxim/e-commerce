@@ -1,0 +1,20 @@
+.custom-link{
+    width: 140px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Titillium;
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: none;
+    color: rgb(59, 59, 59);
+    background-color: rgba(247, 247, 247, 0.39);
+    border: 1px solid rgb(255, 255, 255);
+    transition: 0.4s ease;
+
+    &:hover{
+        background-color: rgb(247, 247, 247);
+        transition: 0.4s ease;
+    }
+}

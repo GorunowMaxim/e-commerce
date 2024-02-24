@@ -1,0 +1,38 @@
+.product {
+    color: black;
+    text-align: center;
+
+    &-wrapper {}
+
+    &-image-block {
+        width: 100%;
+        position: relative;
+
+        &:hover {
+            .product-image:last-child {
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 0;
+            }
+        }
+    }
+
+    &-image {
+        width: 100%;
+        object-fit: cover;
+
+        &:last-child {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -10;
+        }
+    }
+
+    &-name{
+        font-family: BebasNeue;
+        font-size: 20px;
+        margin: 10px 0;
+    }
+}

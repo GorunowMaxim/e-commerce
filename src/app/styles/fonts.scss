@@ -1,0 +1,101 @@
+@font-face {
+    font-display: swap;
+    font-family: BebasNeue;
+    font-style: normal;
+    font-weight: 400;
+    src: local('BebasNeue'),
+        url('/fonts/BebasNeue/BebasNeue-Regular.woff2') format('woff2'),
+        url('/fonts/BebasNeue/BebasNeue-Regular.woff') format('woff'),
+}
+
+@font-face {
+    font-display: swap;
+    font-family: IBMPlex;
+    font-style: light;
+    font-weight: 300;
+    src: local('IBMPlexMono'),
+        url('/fonts/IbmPlexMono/IBMPlexMono-Light.woff2') format('woff2'),
+        url('/fonts/IbmPlexMono/IBMPlexMono-Light.woff') format('woff'),
+}
+
+@font-face {
+    font-display: swap;
+    font-family: IBMPlex;
+    font-style: normal;
+    font-weight: 400;
+    src: local('IBMPlexMono'),
+        url('/fonts/IbmPlexMono/IBMPlexMono-Regular.woff2') format('woff2'),
+        url('/fonts/IbmPlexMono/IBMPlexMono-Regular.woff') format('woff'),
+}
+
+@font-face {
+    font-display: swap;
+    font-family: IBMPlex;
+    font-style: medium;
+    font-weight: 500;
+    src: local('IBMPlexMono'),
+        url('/fonts/IbmPlexMono/IBMPlexMono-Medium.woff2') format('woff2'),
+        url('/fonts/IbmPlexMono/IBMPlexMono-Medium.woff') format('woff'),
+}
+
+@font-face {
+    font-display: swap;
+    font-family: IBMPlex;
+    font-style: semi-bold;
+    font-weight: 600;
+    src: local('IBMPlexMono'),
+        url('/fonts/IbmPlexMono/IBMPlexMono-SemiBold.woff2') format('woff2'),
+        url('/fonts/IbmPlexMono/IBMPlexMono-SemiBold.woff') format('woff'),
+}
+
+@font-face {
+    font-display: swap;
+    font-family: IBMPlex;
+    font-style: bold;
+    font-weight: 700;
+    src: local('IBMPlexMono'),
+        url('/fonts/IbmPlexMono/IBMPlexMono-Bold.woff2') format('woff2'),
+        url('/fonts/IbmPlexMono/IBMPlexMono-Bold.woff') format('woff'),
+}
+
+
+@font-face {
+    font-display: swap;
+    font-family: Titillium;
+    font-style: light;
+    font-weight: 300;
+    src: local('TitilliumWeb'),
+        url('/fonts/TitilliumWeb/TitilliumWeb-Light.woff2') format('woff2'),
+        url('/fonts/TitilliumWeb/TitilliumWeb-Light.woff') format('woff'),
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Titillium;
+    font-style: normal;
+    font-weight: 400;
+    src: local('TitilliumWeb'),
+        url('/fonts/TitilliumWeb/TitilliumWeb-Regular.woff2') format('woff2'),
+        url('/fonts/TitilliumWeb/TitilliumWeb-Regular.woff') format('woff'),
+}
+
+
+@font-face {
+    font-display: swap;
+    font-family: Titillium;
+    font-style: semi-bold;
+    font-weight: 600;
+    src: local('TitilliumWeb'),
+        url('/fonts/TitilliumWeb/TitilliumWeb-SemiBold.woff2') format('woff2'),
+        url('/fonts/TitilliumWeb/TitilliumWeb-SemiBold.woff') format('woff'),
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Titillium;
+    font-style: bold;
+    font-weight: 700;
+    src: local('TitilliumWeb'),
+        url('/fonts/TitilliumWeb/TitilliumWeb-Bold.woff2') format('woff2'),
+        url('/fonts/TitilliumWeb/TitilliumWeb-Bold.woff') format('woff'),
+}

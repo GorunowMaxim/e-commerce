@@ -1,0 +1,59 @@
+.sort {
+    width: 250px;
+    position: relative;
+    z-index: 10;
+    background-color: white;
+
+    &-header {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 0 10px;
+        padding: 10px 0;
+        cursor: pointer;
+
+        font-weight: 600;
+
+        &::after {
+            content: url('/public/images/arrow-down.svg');
+            display: block;
+            transform: rotate(-180deg);
+            transition: 0.4s ease;
+        }
+    }
+
+    &-body {
+        position: absolute;
+        top: 100%;
+        background-color: white;
+        display: none;
+    }
+
+    &_open {
+
+
+        .sort-header {
+            &::after {
+                transform: rotate(0deg);
+                transition: 0.4s ease;
+            }
+        }
+
+
+        .sort-body {
+            display: block;
+        }
+    }
+
+}
+
+.choice {
+    width: 250px;
+    padding: 10px;
+    border-bottom: 0.5px solid rgb(238, 234, 234);
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgb(241, 241, 241);
+    }
+}

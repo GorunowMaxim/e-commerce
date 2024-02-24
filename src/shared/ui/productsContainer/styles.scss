@@ -1,0 +1,16 @@
+.products-main {
+    padding: 150px 0px 0px 0px;
+}
+
+.products {
+    &-section {
+        padding: 100px 0;
+    }
+
+    &-wrapper {
+        display: grid;
+        grid: auto / repeat(12, 1fr);
+        gap: 0 3vw;
+        position: relative;
+    }
+}

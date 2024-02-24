@@ -1,0 +1,30 @@
+.cart-product{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0 10px;
+    width: 100%;
+    padding: 10px;
+    font-family: Titillium;
+
+    &__img{
+        flex: 0 0 30%;
+
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__button{
+        flex: 0 0 10%;
+        background-color: transparent;
+    }
+
+    &__price-block{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+}

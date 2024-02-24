@@ -1,0 +1,38 @@
+.filter {
+    width: 85%;
+    grid-column: span 3;
+}
+
+.products {
+    grid-column: span 9;
+
+    &-sort {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        &_wide{
+            padding: 10px 0;
+            justify-content: space-between;
+        }
+    }
+
+    &-box {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 50px;
+    }
+}
+
+.error-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.result-headline{
+    text-align: center;
+    padding: 25px 0;
+}
