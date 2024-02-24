@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "app/store/store";
 import { Outlet } from "react-router-dom";
 import cn from "classnames";
-import Footer from "widgets/footer";
+import Footer from "widgets/footer/Footer";
 import Header from "widgets/header";
 
 const MainLayout = () => {

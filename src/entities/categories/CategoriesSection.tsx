@@ -29,7 +29,7 @@ const CategoriesSection = () => {
                                 <h4 className="grid-item__head">
                                     New men collection
                                 </h4>
-                                <CustomLink text={"shop now"} />
+                                <CustomLink text={"shop now"} path={'men'}/>
                             </div>
                         </motion.div>
                         <motion.div
@@ -47,7 +47,7 @@ const CategoriesSection = () => {
                                 <h4 className="grid-item__head ">
                                     explore the best <br /> of furniture
                                 </h4>
-                                <CustomLink text={"shop now"} />
+                                <CustomLink text={"shop now"} path={'#'}/>
                             </div>
                         </motion.div>
                         <motion.div
@@ -65,7 +65,7 @@ const CategoriesSection = () => {
                                 <h4 className="grid-item__head grid-item__head_black">
                                     Try our looks
                                 </h4>
-                                <CustomLink text={"shop now"} />
+                                <CustomLink text={"shop now"} path={'#'}/>
                             </div>
                         </motion.div>
                         <motion.div
@@ -83,7 +83,7 @@ const CategoriesSection = () => {
                                 <h4 className="grid-item__head">
                                     New women collection
                                 </h4>
-                                <CustomLink text={"shop now"} />
+                                <CustomLink text={"shop now"} path={'women'}/>
                             </div>
                         </motion.div>
                     </div>

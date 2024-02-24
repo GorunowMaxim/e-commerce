@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 import './styles.scss'
 
-const CustomLink = ({text}:{text: string}) => {
+const CustomLink = ({text, path}:{text: string, path: string}) => {
     return ( 
-        <Link to='#' className="custom-link">
+        <Link to={`/${path}`} className="custom-link">
             {text}
         </Link>
     );
