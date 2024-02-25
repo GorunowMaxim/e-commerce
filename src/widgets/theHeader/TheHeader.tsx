@@ -16,7 +16,7 @@ import "./styles.scss";
 
 
 
-export function Header() {
+const TheHeader = () => {
     function isActive({ isActive }: { [isActive: string]: boolean }): string {
         return isActive ? "link link_active" : "link";
     }
@@ -107,3 +107,6 @@ export function Header() {
         </>
     );
 }
+
+
+export default TheHeader;
