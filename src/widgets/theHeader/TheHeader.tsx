@@ -6,15 +6,20 @@ import { changeOverlayState } from "app/store/slices/overlaySlice/overlaySlice";
 
 import Cart from "widgets/cart/Cart";
 import Search from "widgets/search/Search";
+import Authorization from "features/auth/Authorization";
 import Overlay from "shared/ui/overlay/Overlay";
 
 import logo from "/public/images/logo.svg";
-import user from "/public/images/user.svg";
 import searchIcon from "/public/images/search.svg";
 
 import "./styles.scss";
 
-
+const linksData: { [index: string]: string } = {
+    women: "Women",
+    men: "Men",
+    sale: "Sale",
+    aboutUs: "About Us",
+};
 
 const TheHeader = () => {
     function isActive({ isActive }: { [isActive: string]: boolean }): string {
@@ -41,19 +46,15 @@ const TheHeader = () => {
                                     onClick={() => {
                                         dispatch(changeSearchUiState());
                                         dispatch(changeOverlayState());
-                                        setOverlayState(true)
+                                        setOverlayState(true);
                                     }}
                                     className="header-search-button"
                                 >
                                     <img src={searchIcon} alt="" />
                                 </button>
-                                <button className="header-icons__button">
-                                    <img src={user} alt="" />
-                                </button>
+                                <Authorization />
                                 <Cart />
                             </div>
-                            {/* <div className="header-theme"></div>
-                        <div className="header-language"></div> */}
                         </div>
                     </div>
                 </div>
@@ -62,51 +63,33 @@ const TheHeader = () => {
                         <div className="sub-header">
                             <nav className="sub-header-navigation">
                                 <ul className="sub-header-navigation__list">
-                                    <li className="sub-header-navigation__item">
-                                        <NavLink className={isActive} to="/">
-                                            Home
-                                        </NavLink>
-                                    </li>
-                                    <li className="sub-header-navigation__item">
-                                        <NavLink
-                                            className={isActive}
-                                            to="/women"
-                                        >
-                                            Women
-                                        </NavLink>
-                                    </li>
-                                    <li className="sub-header-navigation__item">
-                                        <NavLink className={isActive} to="/men">
-                                            Men
-                                        </NavLink>
-                                    </li>
-                                    <li className="sub-header-navigation__item">
-                                        <NavLink
-                                            className={isActive}
-                                            to="/sale"
-                                        >
-                                            Sale
-                                        </NavLink>
-                                    </li>
-                                    <li className="sub-header-navigation__item">
-                                        <NavLink
-                                            className={isActive}
-                                            to="/about"
-                                        >
-                                            About us
-                                        </NavLink>
-                                    </li>
+                                    {Object.keys(linksData).map(
+                                        (link, index) => {
+                                            return (
+                                                <li
+                                                    key={index}
+                                                    className="sub-header-navigation__item"
+                                                >
+                                                    <NavLink
+                                                        className={isActive}
+                                                        to={`/${linksData[link]}`}
+                                                    >
+                                                        {linksData[link]}
+                                                    </NavLink>
+                                                </li>
+                                            );
+                                        }
+                                    )}
                                 </ul>
                             </nav>
                         </div>
                     </div>
                 </div>
             </header>
-            <Search setOverlayState={setOverlayState}/>
+            <Search setOverlayState={setOverlayState} />
             {overlayState && <Overlay />}
         </>
     );
-}
-
+};
 
 export default TheHeader;
