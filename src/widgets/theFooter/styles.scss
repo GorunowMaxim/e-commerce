@@ -20,93 +20,16 @@
             color: inherit;
             text-align: center;
         }
-
-
     }
 
-    &-link{
+    &-link {
         color: inherit;
         font-family: Titillium;
         transition: 0.3s ease;
 
-        &:hover{
+        &:hover {
             color: #181818af;
             transition: 0.3s ease;
-        }
-    }
-
-
-}
-
-.footer-subscribe {
-    border-bottom: 1px solid rgb(229, 229, 229);
-
-    &__wrapper {
-        padding: 35px 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0 20%;
-    }
-
-    &__info {
-        &-headline {
-            padding: 10px 0;
-        }
-
-        &-text {
-            font-family: Titillium;
-        }
-    }
-
-    &__socials {
-        margin: 40px 0px 0px 0px;
-        display: inline-flex;
-        gap: 0 10px;
-
-        &-link {
-            color: inherit;
-        }
-    }
-
-    &__form {
-        &-label {
-            padding: 10px 0;
-        }
-
-        &-text {
-            font-family: Titillium;
-            text-transform: uppercase;
-            margin: 0px 0px 10px 0px;
-        }
-
-        &-wrapper {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-width: 459px;
-            gap: 0 20px;
-        }
-
-        &-input {
-            padding: 0 10px;
-            border-bottom: 1px solid black;
-            background-color: transparent;
-            height: 44px;
-            flex: 1 1 auto;
-            font-weight: 600;
-            font-family: Titillium;
-            color: rgb(26, 26, 26);
-        }
-
-        &-button {
-            height: 44px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 600;
-            font-family: Titillium;
-            flex: 0 1 113px;
         }
     }
 }

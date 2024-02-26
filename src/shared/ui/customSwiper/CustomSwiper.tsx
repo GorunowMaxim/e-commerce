@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "app/store/store";
 import { useState, useEffect } from "react";
+import { getSuccess, hasError } from "app/store/slices/mainSlice/mainSlice";
 import axios from "axios";
 
 import type { ProductData } from "shared/interfaces";
@@ -11,7 +12,6 @@ import "swiper/css";
 
 import Product from "entities/product/Product";
 import ProductSkeleton from "../skeletons/productSkeleton/ProductSkeleton";
-import { getSuccess, hasError } from "app/store/slices/mainSlice/mainSlice";
 
 interface CustomSwiperProps {
     url: string;
@@ -25,6 +25,23 @@ const CustomSwiper = ({ url, delay, direction }: CustomSwiperProps) => {
     );
     const dispatch = useDispatch();
     const [productsData, setProductsData] = useState<ProductData[]>([]);
+    const SwiperModule: [typeof Autoplay] = [Autoplay];
+
+    const swiperProps = {
+        spaceBetween: 75,
+        loop: true,
+        simulateTouch: true,
+        slidesPerView: 4,
+        speed: 1800,
+        autoplay: {
+            delay,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+            reverseDirection: direction,
+        },
+        modules: SwiperModule,
+        className: "swiper-products",
+    };
 
     useEffect(() => {
         try {
@@ -46,21 +63,7 @@ const CustomSwiper = ({ url, delay, direction }: CustomSwiperProps) => {
             className="swiper-container"
             style={{ paddingTop: 50, paddingBottom: 50 }}
         >
-            <Swiper
-                spaceBetween={75}
-                loop={true}
-                simulateTouch={true}
-                slidesPerView={4}
-                speed={1800}
-                autoplay={{
-                    delay: delay,
-                    disableOnInteraction: false,
-                    pauseOnMouseEnter: true,
-                    reverseDirection: direction,
-                }}
-                modules={[Autoplay]}
-                className="swiper-products"
-            >
+            <Swiper {...swiperProps}>
                 {appStatus === "success" &&
                     productsData.map((product, index) => {
                         return (
@@ -69,13 +72,12 @@ const CustomSwiper = ({ url, delay, direction }: CustomSwiperProps) => {
                             </SwiperSlide>
                         );
                     })}
-                {appStatus === "loading" ||
-                    (appStatus === "error" &&
-                        [...new Array(8)].map((_el, index) => (
-                            <SwiperSlide key={index}>
-                                <ProductSkeleton key={index} />
-                            </SwiperSlide>
-                        )))}
+                {appStatus !== "success" &&
+                    [...new Array(8)].map((_el, index) => (
+                        <SwiperSlide key={index}>
+                            <ProductSkeleton key={index} />
+                        </SwiperSlide>
+                    ))}
             </Swiper>
         </div>
     );

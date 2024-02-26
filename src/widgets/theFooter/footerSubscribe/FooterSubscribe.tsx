@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
+import SubscribeForm from "features/subscribeForm/SubscribeForm";
 
 
 const footerLinks: { [index: string]: JSX.Element } = {
@@ -27,22 +28,7 @@ const FooterSubscribe = () => {
                         </p>
                     </div>
                     <div className="footer-subscribe__connect">
-                        <form className="footer-subscribe__form">
-                            <label className="footer-subscribe__form-label">
-                                <p className="footer-subscribe__form-text">
-                                    email address
-                                </p>
-                                <div className="footer-subscribe__form-wrapper">
-                                    <input
-                                        type="email"
-                                        className="footer-subscribe__form-input"
-                                    />
-                                    <button className="footer-subscribe__form-button">
-                                        subscribe
-                                    </button>
-                                </div>
-                            </label>
-                        </form>
+                        <SubscribeForm />
                         <div className="footer-subscribe__socials">
                             {Object.keys(footerLinks).map((link, index) => {
                                 return (
