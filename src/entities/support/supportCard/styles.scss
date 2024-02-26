@@ -24,3 +24,9 @@
         font-weight: 600;
     }
 }
+
+@media (max-width: 480px) {
+    .support-card{
+        width: 95%;
+    }
+}

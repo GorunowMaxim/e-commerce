@@ -13,7 +13,7 @@ const CategoriesSection = () => {
                     <div className="grid-container">
                         <motion.div
                             viewport={{ once: true }}
-                            initial={{ x: -250, opacity: 0 }}
+                            initial={{ x: -50, opacity: 0 }}
                             whileInView={{ x: 0, opacity: 1 }}
                             transition={{ ease: "easeOut", duration: 0.6 }}
                             className="grid-item"
@@ -52,7 +52,7 @@ const CategoriesSection = () => {
                         </motion.div>
                         <motion.div
                             viewport={{ once: true }}
-                            initial={{ y: 250, opacity: 0 }}
+                            initial={{ y: 50, opacity: 0 }}
                             whileInView={{ y: 0, opacity: 1 }}
                             transition={{
                                 ease: "easeOut",

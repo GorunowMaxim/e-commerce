@@ -1,0 +1,20 @@
+.accordion {
+
+    &-header {
+        border-radius: 0px !important;
+        box-shadow: none !important;
+        background-color: transparent !important;
+    }
+
+    &-name {
+        width: 100%;
+        text-align: center;
+        margin: 0px 0px 0px 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer-accordion{
+        display: none;
+    }
+}

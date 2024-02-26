@@ -17,6 +17,10 @@ const footerData: FooterData = {
         groupName: "Customer Service",
         links: ["Help", "Shipping", "Returns", "Payments", "Your Order"],
     },
+    contactUs: {
+        groupName: "Contact Us",
+        links: ['+44 (0)333 323 7728', 'moonsoon@gmail.com'],
+    },
 };
 
 const FooterNavigation = () => {
@@ -56,23 +60,6 @@ const FooterNavigation = () => {
                                 </div>
                             );
                         })}
-                        <div className="footer-navigation__column">
-                            <h5 className="footer-navigation__column-headline">
-                                Contact us
-                            </h5>
-                            <ul className="footer-navigations__list">
-                                <li className="footer-navigation__item">
-                                    <Link className="footer-link " to="#">
-                                        +44 (0)333 323 7728
-                                    </Link>
-                                </li>
-                                <li className="footer-navigation__item">
-                                    <Link className="footer-link " to="#">
-                                        moonsoon@gmail.com
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
                     </nav>
                 </div>
             </div>

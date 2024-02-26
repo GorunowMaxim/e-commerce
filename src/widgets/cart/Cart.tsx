@@ -11,8 +11,6 @@ import { RootState } from "app/store/store";
 
 import "./styles.scss";
 
-
-
 const Cart = () => {
     const [state, setState] = useState(false);
     const { products } = useSelector((state: RootState) => state.cart);
@@ -24,7 +22,7 @@ const Cart = () => {
             <Badge badgeContent={products.length} color="primary">
                 <button
                     onClick={() => {
-                        dispatch(changeOverlayState())
+                        dispatch(changeOverlayState());
                         setOverlayState(true);
                         setState(true);
                     }}
@@ -33,7 +31,11 @@ const Cart = () => {
                     <img src={cart} alt="" />
                 </button>
             </Badge>
-            <CartContainer state={state} setState={setState} setOverlayState={setOverlayState}/>
+            <CartContainer
+                state={state}
+                setState={setState}
+                setOverlayState={setOverlayState}
+            />
             {overlayState && <Overlay />}
         </>
     );

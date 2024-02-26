@@ -8,5 +8,13 @@
         align-items: center;
         justify-content: space-around;
     }
+}
 
+@media (max-width: 860px) {
+    .support{
+        &-wrapper{
+            flex-direction: column;
+            gap: 20px 0;
+        }
+    }
 }

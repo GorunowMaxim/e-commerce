@@ -33,6 +33,20 @@ const CustomSwiper = ({ url, delay, direction }: CustomSwiperProps) => {
         simulateTouch: true,
         slidesPerView: 4,
         speed: 1800,
+        breakpoints: {
+            320:{
+                slidesPerView: 2,
+                spaceBetween: 40,
+            },
+            700: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+            },
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 60,
+            },
+        },
         autoplay: {
             delay,
             disableOnInteraction: false,
@@ -44,18 +58,18 @@ const CustomSwiper = ({ url, delay, direction }: CustomSwiperProps) => {
     };
 
     useEffect(() => {
-        try {
-            const fetchData = async () => {
+        const fetchData = async () => {
+            try {
                 await axios.get(url).then((response) => {
                     setProductsData(response.data);
                     dispatch(getSuccess());
                 });
-            };
-            fetchData();
-        } catch (e) {
-            console.log(e);
-            dispatch(hasError());
-        }
+            } catch (e) {
+                console.log(e);
+                dispatch(hasError());
+            }
+        };
+        fetchData();
     }, []);
 
     return (
@@ -84,3 +98,25 @@ const CustomSwiper = ({ url, delay, direction }: CustomSwiperProps) => {
 };
 
 export default CustomSwiper;
+// spaceBetween={75}
+// loop={true}
+// simulateTouch={true}
+// slidesPerView={4}
+// speed={1800}
+// breakpoints={{
+//     860: {
+//         slidesPerView: 3,
+//         spaceBetween: 40,
+//     },
+//     1024: {
+//         slidesPerView: 2,
+//     },
+// }}
+// autoplay={{
+//     delay,
+//     disableOnInteraction: false,
+//     pauseOnMouseEnter: true,
+//     reverseDirection: direction,
+// }}
+// modules={[Autoplay]}
+// className="swiper-products"
