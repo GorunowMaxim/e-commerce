@@ -1,13 +1,15 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { clearProducts } from "app/store/slices/productsSlice/productsSlice";
 import { setCategories } from "app/store/slices/categoriesSlice/categoriesSlice";
 
 import cn from "classnames";
 
 import "./styles.scss";
+import { RootState } from "app/store/store";
 
 const Sort = () => {
+    const { category } = useSelector((state: RootState) => state.categories);
     const [open, setPopupState] = useState(false);
     const dispatch = useDispatch();
 
@@ -22,20 +24,20 @@ const Sort = () => {
                 <p>sort by</p>
             </div>
             <div className="sort-body">
-                {categoriesArray.map((category, index) => {
+                {categoriesArray.map((choice, index) => {
                     return (
                         <div
                             key={index}
-                            id={category}
+                            id={choice}
                             onClick={() => {
-                                dispatch(setCategories(category));
+                                dispatch(setCategories(choice));
                                 dispatch(clearProducts());
                                 setPopupState(!open);
                             }}
                             className="choice text"
                         >
-                            <p className="choice__text choice__text_active text">
-                                {category}
+                            <p className={cn(category === choice ? "choice__text choice__text_active text" : "choice__text text" )} >
+                                {choice}
                             </p>
                         </div>
                     );

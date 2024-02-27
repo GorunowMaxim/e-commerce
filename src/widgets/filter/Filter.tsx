@@ -14,6 +14,7 @@ import { AppDispatch, RootState } from "app/store/store";
 
 import { useState } from "react";
 import RadioButton from "shared/ui/radioButton/RadioButton";
+import ChangePrice from "features/changePrice/ChangePrice";
 
 
 const optionValues: { [index: string]: string[] } = {
@@ -127,6 +128,9 @@ const Filter = ({ url }: { url: string }) => {
                             );
                         })}
                     </div>
+                </FilterContainer>
+                <FilterContainer nameCategory="Price" visible={true} >
+                    <ChangePrice url={url} />
                 </FilterContainer>
                 <button
                     onClick={() => {

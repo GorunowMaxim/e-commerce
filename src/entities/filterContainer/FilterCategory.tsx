@@ -7,10 +7,11 @@ import "./styles.scss";
 
 interface Props {
     nameCategory?: string;
+    visible?: boolean,
     children: ReactNode;
 };
 
-const FilterContainer = ({ children, nameCategory }: Props) => {
+const FilterContainer = ({ children, nameCategory, visible }: Props) => {
     const [state, setState] = useState(false);
     return (
         <div className={cn("category", state ? "category_open" : null)}>
@@ -26,7 +27,7 @@ const FilterContainer = ({ children, nameCategory }: Props) => {
                         alt="arrow-sign"
                     />
                 </div>
-                <div className="category-body">{children}</div>
+                <div className={cn(visible ? "category-body category-body_visible" : "category-body" )}>{children}</div>
             </div>
         </div>
     );

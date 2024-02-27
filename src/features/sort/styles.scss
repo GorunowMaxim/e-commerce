@@ -53,6 +53,18 @@
     border-bottom: 0.5px solid rgb(238, 234, 234);
     cursor: pointer;
 
+
+    &__text_active {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &::after {
+            content: url('/public/images/check.svg');
+            display: block;
+        }
+    }
+
     &:hover {
         background-color: rgb(241, 241, 241);
     }

@@ -11,7 +11,8 @@ interface initialProductsState {
         brand: string | null;
         color: string | null;
         size: string | null;
-        price: string | null;
+        minPrice: number;
+        maxPrice: number;
     };
 }
 
@@ -22,17 +23,27 @@ const initialState: initialProductsState = {
         brand: null,
         color: null,
         size: null,
-        price: null,
+        minPrice: 0,
+        maxPrice: 1000,
     },
 };
 
 export const fetchingProducts = createAsyncThunk(
     "products/fetchingFiltredProducts",
-    async ({ url, category, currentSearchValue }: { url: string; category: string, currentSearchValue?: string }, thunkAPI) => {
+    async (
+        {
+            url,
+            category,
+            currentSearchValue,
+        }: { url: string; category: string; currentSearchValue?: string },
+        thunkAPI
+    ) => {
         thunkAPI.dispatch(startLoading());
         try {
             const response = await axios.get(
-                `${url}?${currentSearchValue ? `search=${currentSearchValue}` : ''}&${
+                `${url}?${
+                    currentSearchValue ? `search=${currentSearchValue}` : ""
+                }&${
                     category !== "default"
                         ? `sortBy=price&order=${category}`
                         : ""
@@ -63,10 +74,18 @@ export const productsSlice = createSlice({
         changeFilterConfigSize(state, action: PayloadAction<string>) {
             state.filterConfig.size = action.payload;
         },
+        changeFilterConfigMinPrice(state, action: PayloadAction<number>) {
+            state.filterConfig.minPrice = action.payload;
+        },
+        changeFilterConfigMaxPrice(state, action: PayloadAction<number>) {
+            state.filterConfig.maxPrice = action.payload;
+        },
         clearFilterProperties(state) {
             state.filterConfig.size = null;
             state.filterConfig.brand = null;
             state.filterConfig.color = null;
+            state.filterConfig.minPrice = 0;
+            state.filterConfig.maxPrice = 1000;
         },
     },
     extraReducers: (builder) => {
@@ -79,7 +98,10 @@ export const productsSlice = createSlice({
                         (!filters.brand || product.brand === filters.brand) &&
                         (!filters.color ||
                             product.filterColor === filters.color) &&
-                        (!filters.size || product.sizes.includes(filters.size))
+                        (!filters.size ||
+                            product.sizes.includes(filters.size)) &&
+                        product.price >= filters.minPrice &&
+                        product.price <= filters.maxPrice
                     );
                 });
             }
@@ -93,6 +115,8 @@ export const {
     changeFilterConfigColor,
     changeFilterConfigSize,
     clearFilterProperties,
+    changeFilterConfigMinPrice,
+    changeFilterConfigMaxPrice,
 } = productsSlice.actions;
 
 export default productsSlice.reducer;
