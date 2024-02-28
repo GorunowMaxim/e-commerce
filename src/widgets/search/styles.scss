@@ -73,3 +73,14 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+@media (max-width: 700px) {
+    .search {
+        &-body {
+
+            &__wrapper {
+                padding: 5px 0;
+            }
+        }
+    }
+}

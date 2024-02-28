@@ -4,13 +4,45 @@
 
 .products {
     &-section {
-        padding: 100px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &-menu {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &__button {
+            flex: 1 1 auto;
+            height: 64px;
+            font-family: Titillium;
+            font-weight: 600;
+            font-size: 18px;
+            background-color: white;
+
+            &:nth-child(1) {
+                border-right: 1px solid rgb(238, 233, 233);
+            }
+        }
     }
 
     &-wrapper {
+        padding: 100px 0;
         display: grid;
         grid: auto / repeat(12, 1fr);
         gap: 0 3vw;
         position: relative;
+    }
+}
+
+@media (max-width: 1024px) {
+    .products {
+        &-wrapper{
+            padding: 50px 0px 100px 0px;;
+        }
     }
 }

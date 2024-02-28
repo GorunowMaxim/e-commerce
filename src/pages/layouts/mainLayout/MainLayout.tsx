@@ -10,6 +10,7 @@ import TheHeader from "widgets/theHeader/TheHeader";
 
 const MainLayout = () => {
     const { overlayState } = useSelector((state: RootState) => state.overlay);
+
     return (
         <div
             className={cn(overlayState ? "wrapper wrapper_hidden" : "wrapper")}

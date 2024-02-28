@@ -1,0 +1,15 @@
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 20%;
+    margin: 0px 0px 25px 0px;
+}
+
+.price-input {
+    width: 95px;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 5px;
+    font-family: Titillium;
+    font-weight: 600;
+}

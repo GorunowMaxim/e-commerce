@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useEffect, useRef } from "react";
 
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
@@ -11,28 +11,31 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "app/store/store";
 import debounce from "lodash.debounce";
+import "./styles.scss";
 
 function valuetext(value: number) {
-    return `${value}°C`;
+    return `$${value}`;
 }
 
 const minDistance = 10;
 
-const ChangePrice = ({ url }: { url: string }) => {
+interface ChangePriceProps {
+    url: string;
+    value: number[];
+    setValue: (arr: number[]) => void;
+}
+
+const ChangePrice = ({ url, value, setValue }: ChangePriceProps) => {
     const dispatch = useDispatch<AppDispatch>();
     const { category } = useSelector((state: RootState) => state.categories);
-    const { minPrice, maxPrice } = useSelector(
-        (state: RootState) => state.products.filterConfig
-    );
-    console.log(minPrice, maxPrice)
 
     const { currentSearchValue } = useSelector(
         (state: RootState) => state.search
     );
-    const [value, setValue] = useState<number[]>([0, 1000]);
-    console.log('value', value)
+
+
     const handleChange = (
-        event: Event,
+        _event: Event,
         newValue: number | number[],
         activeThumb: number
     ) => {
@@ -61,6 +64,24 @@ const ChangePrice = ({ url }: { url: string }) => {
         ]);
     };
 
+    interface InputsFunctions {
+        [index: string]: {
+            handleInputChange: (event: ChangeEvent<HTMLInputElement>) => void;
+            changePrice: (num: number) => void;
+        };
+    }
+
+    const inputsFunctions: InputsFunctions = {
+        firstInput: {
+            handleInputChange: handleInputChange1,
+            changePrice: changeFilterConfigMinPrice,
+        },
+        secondInput: {
+            handleInputChange: handleInputChange2,
+            changePrice: changeFilterConfigMaxPrice,
+        },
+    };
+
     const handleBlur = () => {
         if (value[0] < 0) {
             setValue([0, value[1]]);
@@ -69,60 +90,70 @@ const ChangePrice = ({ url }: { url: string }) => {
         }
     };
 
+    const debouncedDispatch = useRef<(value: number[]) => void>(() => {});
+
+    useEffect(() => {
+        debouncedDispatch.current = debounce((value: number[]) => {
+            dispatch(changeFilterConfigMinPrice(value[0]));
+            dispatch(changeFilterConfigMaxPrice(value[1]));
+            dispatch(
+                fetchingProducts({
+                    url,
+                    category,
+                    currentSearchValue,
+                })
+            );
+        }, 1000);
+    }, []);
+
+    useEffect(() => {
+        debouncedDispatch.current(value);
+    }, [value]);
+
     return (
         <Box sx={{ width: 300 }}>
-            <Input
-                value={value[0]}
-                size="small"
-                onChange={(e: ChangeEvent<HTMLInputElement>) => {
-                    handleInputChange1(e);
-                    const fetchDebounced = debounce(() => {
-                        dispatch(changeFilterConfigMinPrice(Number(e.target.value)));
-                        dispatch(
-                            fetchingProducts({
-                                url,
-                                category,
-                                currentSearchValue,
-                            })
-                        );
-                    }, 1000);
-                    fetchDebounced();
-                }}
-                onBlur={handleBlur}
-                inputProps={{
-                    step: 10,
-                    min: 0,
-                    max: 1000,
-                    type: "text",
-                    "aria-labelledby": "input-slider",
-                }}
-            />
-            <Input
-                value={value[1]}
-                size="small"
-                onChange={(e: ChangeEvent<HTMLInputElement>) => {
-                    handleInputChange2(e);
-                    const fetchDebounced = debounce(() => {
-                        dispatch(changeFilterConfigMaxPrice(Number(e.target.value)));
-                        dispatch(
-                            fetchingProducts({
-                                url,
-                                category,
-                                currentSearchValue,
-                            })
-                        );
-                    }, 1000);
-                    fetchDebounced();
-                }}
-                onBlur={handleBlur}
-                inputProps={{
-                    step: 10,
-                    min: 0,
-                    max: 1000,
-                    type: "text",
-                    "aria-labelledby": "input-slider",
-                }}
-            />
+            <div className="input-container">
+                {Object.keys(inputsFunctions).map((func, index) => {
+                    return (
+                        <Input
+                            key={index}
+                            value={value[index]}
+                            className="price-input"
+                            size="small"
+                            onChange={(e: ChangeEvent<HTMLInputElement>) => {
+                                inputsFunctions[func].handleInputChange(e);
+                                const fetchDebounced = debounce(() => {
+                                    dispatch(() =>
+                                        inputsFunctions[func].changePrice(
+                                            Number(e.target.value)
+                                        )
+                                    );
+                                    dispatch(
+                                        fetchingProducts({
+                                            url,
+                                            category,
+                                            currentSearchValue,
+                                        })
+                                    );
+                                }, 1000);
+                                fetchDebounced();
+                            }}
+                            onBlur={handleBlur}
+                            inputProps={{
+                                step: 10,
+                                min: 0,
+                                max: 1000,
+                                type: "text",
+                                style: {
+                                    textAlign: "center",
+                                    padding: "7px 0px",
+                                },
+                                "aria-labelledby": "input-slider",
+                            }}
+                        />
+                    );
+                })}
+            </div>
             <Slider
                 sx={{ color: "black" }}
                 getAriaLabel={() => "Minimum distance"}

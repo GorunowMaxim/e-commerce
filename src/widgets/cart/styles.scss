@@ -81,3 +81,10 @@
         width: 320px;
     }
 }
+
+
+@media (max-width: 375px) {
+    .cart {
+        width: 100vw;
+    }
+}

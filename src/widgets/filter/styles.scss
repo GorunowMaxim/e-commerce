@@ -43,3 +43,44 @@
         }
     }
 }
+
+.close-button {
+    background-color: transparent;
+    margin: 0px 0px 0px auto;
+    display: block;
+    &-wrapper {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .filter {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        z-index: 10000;
+        background-color: white;
+        height: 100vh;
+        width: 375px;
+        transition: 0.6s ease;
+        padding: 20px;
+        overflow-y: scroll;
+
+        &_open {
+            left: 0;
+            transition: 0.4s ease;
+        }
+    }
+
+    .close-button {
+        &-wrapper {
+            display: block;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .filter {
+        width: 100vw;
+    }
+}

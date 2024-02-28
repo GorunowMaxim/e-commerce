@@ -1,5 +1,4 @@
 .filter {
-    width: 85%;
     grid-column: span 3;
 }
 
@@ -35,4 +34,24 @@
 .result-headline{
     text-align: center;
     padding: 25px 0;
+}
+
+@media (max-width: 1024px) {
+    .products {
+        grid-column: span 12;
+
+        &-box{
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .products {
+        grid-column: span 12;
+
+        &-box{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
 }

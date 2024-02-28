@@ -1,4 +1,4 @@
-import { ReactElement, useEffect } from "react";
+import { ReactElement, useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchingProducts } from "app/store/slices/productsSlice/productsSlice";
 
@@ -20,22 +20,37 @@ interface CommonProductPageProps {
 }
 
 const CommonProductsPage = ({ func, url }: CommonProductPageProps) => {
+    const [filterState, setFilterState] = useState(false);
+    const [openSort, setOpenSort] = useState(false);
     const { source } = useSelector((state: RootState) => state.products);
     const { appStatus } = useSelector(
         (state: RootState) => state.app.configState
     );
     const { category } = useSelector((state: RootState) => state.categories);
+
     const dispatch = useDispatch<AppDispatch>();
+
     useEffect(() => {
         dispatch(fetchingProducts({ url, category }));
     }, [category]);
 
+    const dataState = {
+        filterState,
+        openSort,
+        setFilterState,
+        setOpenSort,
+    };
+
     return (
-        <ProductsContainer>
-            <Filter url={url} />
+        <ProductsContainer dataState={dataState}>
+            <Filter
+                url={url}
+                filterState={filterState}
+                setFilterState={setFilterState}
+            />
             <div className="products">
                 <div className="products-sort">
-                    <Sort />
+                    <Sort openSort={openSort} setOpenSort={setOpenSort} />
                 </div>
                 <div className="products-box">
                     {func({ appStatus, source })}
