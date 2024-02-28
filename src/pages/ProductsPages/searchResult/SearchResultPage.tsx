@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchingProducts } from "app/store/slices/productsSlice/productsSlice";
 
@@ -38,6 +38,8 @@ function renderProduct({ appStatus, source }: RenderProductProps) {
 }
 
 const SearchResultPage = () => {
+    const [filterState, setFilterState] = useState(false);
+    const [openSort, setOpenSort] = useState(false);
     const { appStatus } = useSelector(
         (state: RootState) => state.app.configState
     );
@@ -53,13 +55,26 @@ const SearchResultPage = () => {
         }
     }, [category]);
 
+    const dataState = {
+        filterState,
+        openSort,
+        setFilterState,
+        setOpenSort,
+    };
+
     return (
-        <ProductsContainer>
-            <Filter url={url} />
+        <ProductsContainer dataState={dataState}>
+            <Filter
+                url={url}
+                filterState={filterState}
+                setFilterState={setFilterState}
+            />
             <div className="products">
-                <h4 className="result-headline">search results for "{currentSearchValue}"</h4>
+                <h4 className="result-headline">
+                    search results for "{currentSearchValue}"
+                </h4>
                 <div className="products-sort">
-                    <Sort />
+                    <Sort openSort={openSort} setOpenSort={setOpenSort} />
                 </div>
                 <div className="products-box">
                     {renderProduct({ appStatus, source })}
