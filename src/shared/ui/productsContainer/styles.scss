@@ -11,23 +11,7 @@
     }
 
     &-menu {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        &__button {
-            flex: 1 1 auto;
-            height: 64px;
-            font-family: Titillium;
-            font-weight: 600;
-            font-size: 18px;
-            background-color: white;
-
-            &:nth-child(1) {
-                border-right: 1px solid rgb(238, 233, 233);
-            }
-        }
+        display: none;
     }
 
     &-wrapper {
@@ -41,8 +25,29 @@
 
 @media (max-width: 1024px) {
     .products {
-        &-wrapper{
-            padding: 50px 0px 100px 0px;;
+        &-wrapper {
+            padding: 50px 0px 100px 0px;
+            ;
+        }
+
+        &-menu {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &__button {
+                flex: 1 1 auto;
+                height: 64px;
+                font-family: Titillium;
+                font-weight: 600;
+                font-size: 18px;
+                background-color: white;
+
+                &:nth-child(1) {
+                    border-right: 1px solid rgb(238, 233, 233);
+                }
+            }
         }
     }
 }

@@ -19,7 +19,7 @@ import searchIcon from "/public/images/search.svg";
 import Close from "@mui/icons-material/Close";
 import SearchItem from "entities/searchItem/SearchItem";
 import CircleLoading from "shared/ui/circleLoading/CircleLoading";
-import { fetchingProducts } from "app/store/slices/productsSlice/productsSlice";
+import { clearFilterProperties, fetchingProducts } from "app/store/slices/productsSlice/productsSlice";
 
 interface SearchProps {
     setOverlayState: (boolean: boolean) => void;
@@ -73,6 +73,7 @@ const Search = ({ setOverlayState }: SearchProps) => {
                                             if (e.key === "Enter") {
                                                 dispatch(changeSearchUiState());
                                                 dispatch(changeOverlayState());
+                                                dispatch(clearFilterProperties());
                                                 setOverlayState(false);
                                                 dispatch(fetchingProducts({ url, category, currentSearchValue }));
                                                 navigate("/search-result");

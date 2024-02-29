@@ -15,14 +15,14 @@ import "../styles.scss";
 
 const url = "https://65c52bc7dae2304e92e4009d.mockapi.io/items";
 
-function renderProduct({ appStatus, source }: RenderProductProps) {
+function renderProduct({ appStatus, searchData }: RenderProductProps) {
     switch (appStatus) {
         case "loading":
             return [...new Array(16)].map((_, index) => (
                 <ProductSkeleton key={index} />
             ));
         case "success":
-            return source.map((product, index) => (
+            return searchData && searchData.map((product, index) => (
                 <Product key={index} product={product} />
             ));
         case "error":
@@ -46,7 +46,7 @@ const SearchResultPage = () => {
     const { currentSearchValue } = useSelector(
         (state: RootState) => state.search
     );
-    const { source } = useSelector((state: RootState) => state.products);
+    const { searchData } = useSelector((state: RootState) => state.search);
     const { category } = useSelector((state: RootState) => state.categories);
     const dispatch = useDispatch<AppDispatch>();
     useEffect(() => {
@@ -77,7 +77,7 @@ const SearchResultPage = () => {
                     <Sort openSort={openSort} setOpenSort={setOpenSort} />
                 </div>
                 <div className="products-box">
-                    {renderProduct({ appStatus, source })}
+                    {renderProduct({ appStatus, searchData })}
                 </div>
             </div>
         </ProductsContainer>

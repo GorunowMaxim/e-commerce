@@ -15,7 +15,8 @@ interface CommonProductPageProps {
     func: ({
         appStatus,
         source,
-    }: RenderProductProps) => ReactElement | ReactElement[];
+        searchData,
+    }: RenderProductProps) => ReactElement | ReactElement[] | undefined;
     url: string;
 }
 
@@ -27,7 +28,7 @@ const CommonProductsPage = ({ func, url }: CommonProductPageProps) => {
         (state: RootState) => state.app.configState
     );
     const { category } = useSelector((state: RootState) => state.categories);
-
+    console.log(source);
     const dispatch = useDispatch<AppDispatch>();
 
     useEffect(() => {
@@ -40,6 +41,7 @@ const CommonProductsPage = ({ func, url }: CommonProductPageProps) => {
         setFilterState,
         setOpenSort,
     };
+    console.log(appStatus)
 
     return (
         <ProductsContainer dataState={dataState}>

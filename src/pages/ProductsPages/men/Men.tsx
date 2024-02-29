@@ -16,7 +16,7 @@ function renderProduct({ appStatus, source }: RenderProductProps) {
                 <ProductSkeleton key={index} />
             ));
         case "success":
-            return source.map((product, index) => (
+            return source && source.map((product, index) => (
                 <Product key={index} product={product} />
             ));
         case "error":

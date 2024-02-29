@@ -39,6 +39,7 @@ export const fetchingProducts = createAsyncThunk(
         thunkAPI
     ) => {
         thunkAPI.dispatch(startLoading());
+        console.log('fetching')
         try {
             const response = await axios.get(
                 `${url}?${

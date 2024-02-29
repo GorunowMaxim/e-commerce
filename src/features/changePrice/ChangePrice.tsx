@@ -12,6 +12,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "app/store/store";
 import debounce from "lodash.debounce";
 import "./styles.scss";
+import { useLocation } from "react-router-dom";
 
 function valuetext(value: number) {
     return `$${value}`;
@@ -33,6 +34,32 @@ const ChangePrice = ({ url, value, setValue }: ChangePriceProps) => {
         (state: RootState) => state.search
     );
 
+    const debouncedDispatch = useRef<(value: number[]) => void>(() => {});
+    const location = useLocation();
+    
+    useEffect(() => {
+        debouncedDispatch.current = debounce((value: number[]) => {
+            dispatch(changeFilterConfigMinPrice(value[0]));
+            dispatch(changeFilterConfigMaxPrice(value[1]));
+            if (location.pathname === '/search-result') {
+                dispatch(
+                    fetchingProducts({
+                        url,
+                        category,
+                        currentSearchValue,
+                    })
+                );
+            } else {
+                dispatch(
+                    fetchingProducts({
+                        url,
+                        category,
+                    })
+                );
+            }
+        }, 1000);
+    }, []);
+
 
     const handleChange = (
         _event: Event,
@@ -45,8 +72,10 @@ const ChangePrice = ({ url, value, setValue }: ChangePriceProps) => {
 
         if (activeThumb === 0) {
             setValue([Math.min(newValue[0], value[1] - minDistance), value[1]]);
+            debouncedDispatch.current(newValue);
         } else {
             setValue([value[0], Math.max(newValue[1], value[0] + minDistance)]);
+            debouncedDispatch.current(newValue);
         }
     };
 
@@ -90,28 +119,8 @@ const ChangePrice = ({ url, value, setValue }: ChangePriceProps) => {
         }
     };
 
-    const debouncedDispatch = useRef<(value: number[]) => void>(() => {});
-
-    useEffect(() => {
-        debouncedDispatch.current = debounce((value: number[]) => {
-            dispatch(changeFilterConfigMinPrice(value[0]));
-            dispatch(changeFilterConfigMaxPrice(value[1]));
-            dispatch(
-                fetchingProducts({
-                    url,
-                    category,
-                    currentSearchValue,
-                })
-            );
-        }, 1000);
-    }, []);
-
-    useEffect(() => {
-        debouncedDispatch.current(value);
-    }, [value]);
-
     return (
-        <Box sx={{ width: 300 }}>
+        <Box>
             <div className="input-container">
                 {Object.keys(inputsFunctions).map((func, index) => {
                     return (

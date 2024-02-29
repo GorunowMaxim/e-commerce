@@ -1,7 +1,7 @@
 import { Accordion, AccordionDetails, AccordionSummary } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import CustomTabsBox from "shared/ui/customTabsBox/CustomTabsBox";
-
+import { aboutText } from "../../../../../../public/texts/text"
 const TabsBox = ({
     value,
     func,
@@ -86,10 +86,7 @@ const TabsBox = ({
                                 How to cancel an order or start a return
                             </AccordionSummary>
                             <AccordionDetails>
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Delectus aliquid blanditiis,
-                                nam amet itaque harum voluptatibus animi tempore
-                                reprehenderit expedita?
+                                {aboutText.contactUs.howToCancel}
                             </AccordionDetails>
                         </Accordion>
                         <Accordion

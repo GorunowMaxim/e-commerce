@@ -23,7 +23,8 @@ interface CartProductData {
 
 interface RenderProductProps {
     appStatus: string;
-    source: ProductData[];
+    source?: ProductData[];
+    searchData?: ProductData[]; 
 }
 
 interface DataSort {
