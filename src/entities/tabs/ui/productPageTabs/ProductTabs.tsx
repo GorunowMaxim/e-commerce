@@ -21,6 +21,7 @@ const ProductTabs = ({ description }: ProductTabs) => {
         <>
             <Tabs
                 TabIndicatorProps={{ sx: { backgroundColor: "black" } }}
+                className="product-tabs-panel"
                 sx={{ borderBottom: "1px solid #ede2e2" }}
                 value={value}
                 onChange={handleChange}
@@ -28,6 +29,7 @@ const ProductTabs = ({ description }: ProductTabs) => {
             >
                 {tabNames.map((el, index) => (
                     <Tab
+                        className="product-tab"
                         key={index}
                         sx={{
                             color: "black !important",

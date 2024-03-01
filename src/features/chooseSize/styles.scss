@@ -19,3 +19,12 @@
         box-shadow: rgb(238, 238, 238) 0px 0px 0px 1px;
     }
 }
+
+
+@media (max-width: 600px) {
+    .sizes{
+        &-block{
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}

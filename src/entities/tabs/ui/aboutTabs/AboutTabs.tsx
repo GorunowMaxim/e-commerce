@@ -18,10 +18,7 @@ export default function AboutTabs() {
         "Contact us",
         "How to shop",
         "Orders and Delivery",
-        "Payment and pricing",
-        "Returns and refunds",
         "Accessibility",
-        "Promotions terms and conditions",
     ];
 
     return (

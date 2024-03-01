@@ -21,616 +21,521 @@
         "id": "2",
         "imageUrl": [
             "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/5/25-01-2024-AJ_24PSW0077FA-B1M01E-23EC_1_1.jpg",
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/5/25-01-2024-AJ_24PSW0077FA-B1M01E-23EC_m9_1.jpg"
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/5/25-01-2024-AJ_24PSW0077FA-B1M01E-23EC_m9_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/5/25-01-2024-AJ_24PSW0077FA-B1M01E-23EC_7_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/5/25-01-2024-AJ_24PSW0077FA-B1M01E-23EC_8_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/5/25-01-2024-AJ_24PSW0077FA-B1M01E-23EC_10_1.jpg"
         ],
         "name": "Isabel Marant Maeva logo hoodie",
+        "description": "Adapting womenswear styles to a male silhouette was relatively seamless for Isabel Marant. Perfect for the colder months, Marant cuts this hoodie from a cosy sherpa fleece. Oversized, for all day comfort, the label’s logo is embroidered on the chest.",
         "color": "Ecru",
         "filterColor": "beidge",
         "price": 255,
         "brand": "Isabel Marant",
-        "sizes": ["s", "m", "l"],
+        "sizes": [ "s", "m", "l"],
         "category": "hoodie"
     },
     {
         "id": "3",
         "imageUrl": [
             "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/5/25-01-24-NS_24PCJU500CO0487-P483_1_1.jpg",
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/5/25-01-24-NS_24PCJU500CO0487-P483_m9_1.jpg"
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/5/25-01-24-NS_24PCJU500CO0487-P483_m9_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/5/25-01-24-NS_24PCJU500CO0487-P483_7_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/5/25-01-24-NS_24PCJU500CO0487-P483_8_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/5/25-01-24-NS_24PCJU500CO0487-P483_10_1.jpg"
         ],
         "name": "Paco Rabanne Monogram Denim Skirt",
+        "description": "Paco Rabanne has been flipping the script on fashion since the groovy '60s. This season, it's hopping on the logomania trend with this denim mini skirt. It's emblazoned at every angle with the brand's monogram and features a shiny silver-tone button on the waist tab.",
         "color": "Blue",
         "filterColor": "blue",
         "price": 520,
         "brand": "Paco Rabanne",
-        "sizes": ["xs", "s", "m", "l"],
+        "sizes": [ "xs", "s", "m", "l"],
         "category": "skirt"
     },
     {
         "id": "4",
         "imageUrl": [
             "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/3/23_01_2024_JD_JAAW2336CH-BRO_1_1.jpg",
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/3/23_01_2024_JD_JAAW2336CH-BRO_m8_1.jpg"
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/3/23_01_2024_JD_JAAW2336CH-BRO_m8_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/3/23_01_2024_JD_JAAW2336CH-BRO_6_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/3/23_01_2024_JD_JAAW2336CH-BRO_7_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/3/23_01_2024_JD_JAAW2336CH-BRO_9_1.jpg"
         ],
         "name": "Sporty & Rich Zipped Polar Fleece Vest",
+        "description": "With curated drops throughout the year, when it comes to Sporty & Rich expect an eclectic colour palette and ‘90s proportions. Crafted from a super soft and warm fabric, this polar fleece vest is the perfect piece for the winter time. For finishing touches of practicality, 2 side pockets and a contrasted chest pocket complete the design.",
         "color": "Chocolate",
         "filterColor": "brown",
         "price": 214,
         "brand": "Sporty & Rich",
-        "sizes": ["xs", "s", "xl", "xxl"],
+        "sizes": [ "xs", "s", "xl", "xxl"],
         "category": "vest"
     },
     {
         "id": "5",
         "imageUrl": [
             "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/5/25-01-24-NS_NW24RSOW00499_1_1.jpg",
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/5/25-01-24-NS_NW24RSOW00499_m9_1.jpg"
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/5/25-01-24-NS_NW24RSOW00499_m9_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/6/26-01-24-NS_NW24RSOW00499_7_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/6/26-01-24-NS_NW24RSOW00499_8_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/6/26-01-24-NS_NW24RSOW00499_10_1.jpg"
         ],
         "name": "Nanushka Hollie Leather Look Jacket",
+        "description": "Since 2006, Sandra Sándor’s Nanushka has been effortlessly balancing fashion with functionality - and this Hollie Leather Look Jacket proves it’s mastered the art. Made from its lustrous OKOBOR™ fabric, this cropped, oversized silhouette is then intricately detailed using a crocheted creme collar around the neckline for a delicate finish.",
         "color": "Black and Creame",
         "filterColor": "black",
         "price": 759,
         "brand": "Nanushka Hollie",
-        "sizes": ["xs", "s", "m"],
+        "sizes": [ "xs", "s", "m"],
         "category": "jacket"
     },
     {
         "id": "6",
         "imageUrl": [
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/1/9/19-01-2024-SI_2411092_1_1.jpg",
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/1/9/19-01-2024-SI_2411092_m9_1.jpg"
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/0/20-02-24-SI_2411090_1_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/0/20-02-24-SI_2411090_7_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/0/20-02-24-SI_2411090_8_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/0/20-02-24-SI_2411090_m9_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/0/20-02-24-SI_2411090_10_1.jpg"
         ],
-        "name": "Daily Paper Avery Denim Jacket",
-        "color": "White & Blue",
-        "filterColor": "blue",
-        "price": 145,
+        "name": "DAILY PAPER HAZEL SHIRT",
+        "description": "Explore the intersection of modern streetwear and cultural legacy with Daily Paper, the Amsterdam brand setting trends in contemporary fashion. The Hazel Shirt is crafted from soft, airy modal fabric for ultimate comfort and includes a lace-up cord closure on the chest, along with a classic shirt collar and back yoke.",
+        "color": "Moonstruck Brown",
+        "filterColor": "brown",
+        "price": 95,
         "brand": "Daily Paper",
-        "sizes": ["xs", "s"],
-        "category": "jacket"
+        "sizes": [ "xs", "s", "l"],
+        "category": "shirt"
     },
     {
         "id": "7",
         "imageUrl": [
             "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/4/24-01-2024-JC_NU23FWSG00271_2_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/4/24-01-2024-JC_NU23FWSG00271_1_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/4/24-01-2024-JC_NU23FWSG00271_3_1.jpg",
             "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/4/24-01-2024-JC_NU23FWSG00271_m6_1.jpg"
         ],
         "name": "Nanushka Kadee Crochet Sunglasses",
+        "description": "Missed the memo? Crochet's cool again, so Nanushka’s applying it to every aspect of our ‘fits - accessories included - with designs like these Kadee Sunglasses. Here, bio-based angular D-frames are outlined by accenting crochet trims, and house contrasting tinted lenses inside. They’ll be eye-catching, for sure.",
         "color": "Shell",
         "filterColor": "beidge",
         "price": 269,
         "brand": "Nanushka Kadee",
-        "sizes": ["xs", "s", "m", "l", "xl", "xxl"],
+        "sizes": ["one size"],
         "category": "sunglasses"
     },
     {
         "id": "8",
         "imageUrl": [
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/1/9/19-01-2024-AJ_2411070_1_1.jpg",
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/1/9/19-01-2024-AJ_2411070_m9_1.jpg"
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/0/20-02-24-SI_2411108_1_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/0/20-02-24-SI_2411108_7_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/0/20-02-24-SI_2411108_8_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/0/20-02-24-SI_2411108_m9_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/0/20-02-24-SI_2411108_10_1.jpg"
         ],
-        "name": "Daily Paper Zoe Open Back Hoodie",
-        "color": "Black",
-        "filterColor": "black",
+        "name": "DAILY PAPER ZORA CARGO SKIRT",
+        "description": "Explore the intersection of modern streetwear and cultural legacy with Daily Paper, the Amsterdam brand setting trends in contemporary fashion. The Hazel Shirt is crafted from soft, airy modal fabric for ultimate comfort and includes a lace-up cord closure on the chest, along with a classic shirt collar and back yoke.",
+        "color": "Chimera Grey",
+        "filterColor": "grey",
         "price": 115,
         "brand": "Daily Paper",
-        "sizes": ["xs", "m", "l"],
-        "category": "hoodie"
+        "sizes": [ "xs", "m", "l"],
+        "category": "skirt"
     },
     {
         "id": "9",
         "imageUrl": [
             "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/1/9/19-01-2024-AJ_2412028_1_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/1/9/19-01-2024-AJ_2412028_7_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/1/9/19-01-2024-AJ_2412028_8_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/1/9/19-01-2024-AJ_2412028_10_1.jpg",
             "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/1/9/19-01-2024-AJ_2412028_m9_1.jpg"
         ],
         "name": "Daily Paper Erib Tanktop",
+        "description": "Explore the intersection of modern streetwear and cultural legacy with Daily Paper, the Amsterdam brand setting trends in contemporary fashion. The Hazel Shirt is crafted from soft, airy modal fabric for ultimate comfort and includes a lace-up cord closure on the chest, along with a classic shirt collar and back yoke.",
         "color": "Icing Yellow",
         "filterColor": "beidge",
         "price": 45,
         "brand": "Daily Paper",
-        "sizes": ["xs", "s"],
+        "sizes": [ "xs", "s"],
         "category": "tanktop"
     },
     {
         "id": "10",
         "imageUrl": [
             "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/4/24-01-24-TC_YY241PT019-BL_1_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/4/24-01-24-TC_YY241PT019-BL_7_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/4/24-01-24-TC_YY241PT019-BL_8_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/4/24-01-24-TC_YY241PT019-BL_10_1.jpg",
             "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/4/24-01-24-TC_YY241PT019-BL_m9_1.jpg"
         ],
         "name": "OPEN YY Cargo Pocket Jeans",
+        "description": "If you like to go off into the Y2K deep end when styling outfits then OPEN YY is for you. This sister-led South Korean label is embracing the return of cargos with these straight-leg jeans. They combine the functionality of workwear leg pockets with a millennial aesthetic, all in a vintage washed cotton denim that ages like fine wine.",
         "color": "Blue",
         "filterColor": "blue",
         "price": 429,
         "brand": "OPEN YY",
-        "sizes": ["xs", "l"],
+        "sizes": [ "xs", "l"],
         "category": "jeans"
     },
     {
         "id": "11",
         "imageUrl": [
             "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/4/24-01-2024-JC_SS24-STRVEST0CRE_1_1.jpg",
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/5/25_01_2024_jd_ss24-strvest0cre_m9.jpg"
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/4/24-01-2024-JC_SS24-STRVEST0CRE_7_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/4/24-01-2024-JC_SS24-STRVEST0CRE_8_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/5/25_01_2024_jd_ss24-strvest0cre_m9.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/4/24-01-2024-JC_SS24-STRVEST0CRE_10_1.jpg"
         ],
         "name": "KNWLS Stray Vest",
+        "description": "Fuelled with biker energy, KNWLS’ SS24 collection keeps us in the fast lace. The Stray Vest, featuring ribbed wool knit, form-fitting shape and slashed hem, perfectly captures that rebel-with-a-cause aesthetic.",
         "color": "Cream",
         "filterColor": "beidge",
         "price": 485,
         "brand": "KNWLS",
-        "sizes": ["l", "xl", "xxl"],
+        "sizes": [ "l", "xl", "xxl"],
         "category": "top"
     },
     {
         "id": "12",
         "imageUrl": [
             "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/4/24-01-2024-JC_SS24-TURDR0INK_1_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/4/24-01-2024-JC_SS24-TURDR0INK_7_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/4/24-01-2024-JC_SS24-TURDR0INK_8_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/4/24-01-2024-JC_SS24-TURDR0INK_10_1.jpg",
             "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/4/24-01-2024-JC_SS24-TURDR0INK_m9_1.jpg"
         ],
         "name": "KNWLS Turbo Dress",
-        "color": "Blue",
-        "filterColor": "blue",
+        "description": "KNWLS thrusts us into the fashion fast lane with its 'Petrol' themed SS24 collection. Oozing biker energy, the Turbo Dress is a stretch mesh wonder with athletic cutting lines and a fit that traces your figure.",
+        "color": "Grey",
+        "filterColor": "grey",
         "price": 309,
         "brand": "KNWLS",
-        "sizes": ["xs", "s", "l", "xl", "xxl"],
+        "sizes": [ "xs", "s", "l", "xl", "xxl"],
         "category": "dress"
     },
     {
         "id": "13",
         "imageUrl": [
             "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/3/23-01-2024-LB_JAAW2314CR-NEU_1_1.jpg",
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/3/23-01-2024-LB_JAAW2314CR-NEU_m8_1.jpg"
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/3/23-01-2024-LB_JAAW2314CR-NEU_6_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/3/23-01-2024-LB_JAAW2314CR-NEU_7_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/3/23-01-2024-LB_JAAW2314CR-NEU_m8_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/3/23-01-2024-LB_JAAW2314CR-NEU_9_1.jpg"
         ],
         "name": "Sporty & Rich Crown LA Puffer Jacket",
+        "description": "Sporty & Rich is your go-to for that '80s sports look. If you're not already in the know (which we bet you are), it's the Instagram-famous brand that expertly blends athletic vibes, vintage flair, and simplistic wearability. The Crown L.A. Puffer Jacket, crafted from nylon and filled with cosy down feathers, is finished with an embroidered felt patch on the arm, a stand collar, and two side pockets. It's all about style and function.",
         "color": "Cream",
         "filterColor": "beidge",
         "price": 397,
         "brand": "Sporty & Rich",
-        "sizes": ["m", "l", "xl", "xxl"],
+        "sizes": [ "m", "l", "xl", "xxl"],
         "category": "jacket"
     },
     {
         "id": "14",
         "imageUrl": [
             "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/4/24_01_2024_JD_DRAW232FO-GRN_1_1.jpg",
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/4/24_01_2024_JD_DRAW232FO-GRN_m8_1.jpg"
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/4/24_01_2024_JD_DRAW232FO-GRN_m8_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/4/24_01_2024_JD_DRAW232FO-GRN_6_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/4/24_01_2024_JD_DRAW232FO-GRN_7_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/4/24_01_2024_JD_DRAW232FO-GRN_9_1.jpg"
         ],
         "name": "Sporty & Rich SRC Tennis Dress",
+        "description": "Serve some serious style with the SRC Tennis Dress from Sporty & Rich. This flirty, athletic piece is designed with a flattering A-line silhouette and breathable fabric for ultimate comfort. It's the perfect blend of sports luxe and trend-setting fashion for your next match or brunch date.",
         "color": "Forest",
         "filterColor": "green",
         "price": 224,
         "brand": "Sporty & Rich",
-        "sizes": ["xs", "l", "xxl"],
+        "sizes": [ "xs", "l", "xxl"],
         "category": "dress"
     },
     {
         "id": "15",
         "imageUrl": [
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/3/23-01-24-ns_36200-0316_1.jpg",
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/3/23-01-24-ns_36200-0316_m9.jpg"
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_200/prodmedia/media/catalog/product/1/8/18-07-2023-si_a6081-0001_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/1/8/18-07-2023-si_a6081-0001_6.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/1/8/18-07-2023-si_a6081-0001_7.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/1/8/18-07-2023-si_a6081-0001_m8.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/1/8/18-07-2023-si_a6081-0001_9.jpg"
         ],
-        "name": "Levis Vintage Clothing 501® Cropped Jeans",
-        "color": "Never Fade",
-        "filterColor": "blue",
+        "name": "LEVI'S RIBCAGE WIDE LEG H223 JEANS",
+        "description": "Levi's rocked the world with the first-ever blue jeans in 1873. Jump into their iconic legacy with these Ribcage Wide Leg H223 Jeans in black. These jeans are where classic meets modern, rocking a high-rise waist and a blissfully comfy wide leg design. They're crafted with Levi's unbeatable expertise and are the epitome of iconic quality. Step into them to boldly flaunt timeless fashion and innovation, all in one stride.",
+        "color": "Black",
+        "filterColor": "black",
         "price": 100,
         "brand": "Levis",
-        "sizes": ["s", "m", "l", "xl"],
+        "sizes": [ "s", "m", "l", "xl"],
         "category": "jeans"
     },
     {
         "id": "16",
         "imageUrl": [
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/5/25-01-2024-AJ_24PSW0077FA-B1M01E-23EC_1_1.jpg",
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/5/25-01-2024-AJ_24PSW0077FA-B1M01E-23EC_m9_1.jpg"
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/0/1/01-02-2024-BLR_24PVE0248FA-B1M02E-02FK_1_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/0/1/01-02-2024-BLR_24PVE0248FA-B1M02E-02FK_7_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/0/1/01-02-2024-BLR_24PVE0248FA-B1M02E-02FK_8_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/0/1/01-02-2024-BLR_24PVE0248FA-B1M02E-02FK_m9_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/0/1/01-02-2024-BLR_24PVE0248FA-B1M02E-02FK_10_1.jpg"
         ],
-        "name": "Isabel Marant Maeva logo hoodie",
-        "color": "Ecru",
-        "filterColor": "beidge",
+        "name": "ISABEL MARANT PARVETI JACKET",
+        "description": "The classic bomber gets a Parisian transformation from Isabel Marant. The Parveti Jacket is elevated to new heights with silver-toned hardware, a chic high collar and embroidered ‘Marant’ wordmark on the pocket. Dress up or down, but we guarantee you’ll never leave home without it.",
+        "color": "Faded Black",
+        "filterColor": "grey",
         "price": 255,
         "brand": "Isabel Marant",
-        "sizes": ["s", "m", "l"],
-        "category": "hoodie"
+        "sizes": [ "s", "m", "l"],
+        "category": "jacket"    
     },
     {
         "id": "17",
         "imageUrl": [
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/5/25-01-24-NS_24PCJU500CO0487-P483_1_1.jpg",
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/5/25-01-24-NS_24PCJU500CO0487-P483_m9_1.jpg"
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/0/8/08-02-24-SI_24PJTE131CO0494-P001_1_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/0/8/08-02-24-six_24pjte131co0494-p001_6.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/0/8/08-02-24-SI_24PJTE131CO0494-P001_7_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/0/8/08-02-24-six_24pjte131co0494-p001_m8.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/0/8/08-02-24-SI_24PJTE131CO0494-P001_9_1.jpg"
         ],
-        "name": "Paco Rabanne Monogram Denim Skirt",
-        "color": "Blue",
-        "filterColor": "blue",
+        "name": "PACO RABANNE P LOGO T-SHIRT",
+        "description": "Revamping the brand’s innovative aesthetic for a modern audience, Paco Rabanne is under the creative direction of Julien Dossena. Casual and iconic, this tee is cut from a sheer jersey for all day comfort. Perfect with denim or anything else, a silver P logo stamped on the chest completes the design.",
+        "color": "Black",
+        "filterColor": "black",
         "price": 520,
         "brand": "Paco Rabanne",
-        "sizes": ["xs", "s", "m", "l"],
-        "category": "skirt"
+        "sizes": [ "xs", "s", "m", "l"],
+        "category": "t-shirt"
     },
     {
         "id": "18",
         "imageUrl": [
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/3/23_01_2024_JD_JAAW2336CH-BRO_1_1.jpg",
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/3/23_01_2024_JD_JAAW2336CH-BRO_m8_1.jpg"
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/0/8/08_02_2024_JD_24PJTE135CO0486-P073_1_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/0/8/08_02_2024_JD_24PJTE135CO0486-P073_6_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/0/8/08_02_2024_JD_24PJTE135CO0486-P073_7_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/0/8/08_02_2024_JD_24PJTE135CO0486-P073_m8_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/0/8/08_02_2024_JD_24PJTE135CO0486-P073_9_1.jpg"
         ],
-        "name": "Sporty & Rich Zipped Polar Fleece Vest",
-        "color": "Chocolate",
-        "filterColor": "brown",
+        "name": "PACO RABANNE LOGO T-SHIRT",
+        "description": "Forever at the forefront of cutting-edge and contemporary design, Paco Rabanne fuses bold design with playful modernity. Casual and iconic, this tee is cut from a sheer jersey for all day comfort. Perfect with denim or anything else, a silver Rabanne logo stamped on the chest completes the design.",
+        "color": "Grey",
+        "filterColor": "grey",
         "price": 214,
-        "brand": "Sporty & Rich",
-        "sizes": ["xs", "s", "xl", "xxl"],
-        "category": "vest"
+        "brand": "PACO RABANNE",
+        "sizes": [ "xs", "s", "xl", "xxl"],
+        "category": "t-shirt"
     },
     {
         "id": "19",
         "imageUrl": [
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/5/25-01-24-NS_NW24RSOW00499_1_1.jpg",
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/5/25-01-24-NS_NW24RSOW00499_m9_1.jpg"
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/1/2/12-07-23-LS_DK0A4YJCBLK1_1_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/1/2/12-07-23-LS_DK0A4YJCBLK1_6_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/1/2/12-07-23-LS_DK0A4YJCBLK1_7_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/1/2/12-07-23-LS_DK0A4YJCBLK1_m8_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/1/2/12-07-23-LS_DK0A4YJCBLK1_9_1.jpg"
         ],
-        "name": "Nanushka Hollie Leather Look Jacket",
-        "color": "Black and Creame",
+        "name": "DICKIES JACKSON CARGO PANTS",
+        "description": "Texan workwear legend Dickies presents a utilitarian staple with its Jackson Cargo Pants. Crafted from water repellent, lightweight fabric, these cargo pants feature double kneed reinforcements for added durability. Cut to a loose fit, they feature toggles at the ankles for a custom silhouette.",
+        "color": "Black",
         "filterColor": "black",
-        "price": 759,
-        "brand": "Nanushka Hollie",
-        "sizes": ["xs", "s", "m"],
-        "category": "jacket"
+        "price": 85,
+        "brand": "Dickies",
+        "sizes": [ "xs", "s", "m"],
+        "category": "pant"
     },
     {
         "id": "20",
         "imageUrl": [
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/1/9/19-01-2024-SI_2411092_1_1.jpg",
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/1/9/19-01-2024-SI_2411092_m9_1.jpg"
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/1/1/11_08_2023_JD_DQ5767-010_1_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/1/1/11_08_2023_JD_DQ5767-010_6_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/1/1/11_08_2023_JD_DQ5767-010_7_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/1/1/11_08_2023_JD_DQ5767-010_m8_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/1/1/11_08_2023_JD_DQ5767-010_9_1.jpg"
         ],
-        "name": "Daily Paper Avery Denim Jacket",
-        "color": "White & Blue",
-        "filterColor": "blue",
-        "price": 145,
-        "brand": "Daily Paper",
-        "sizes": ["xs", "s"],
-        "category": "jacket"
+        "name": "NIKE PHOENIX FLEECE QUARTER ZIP CROP",
+        "description": "Exaggerated details and soft fleece characterise Nike's 'Phoenix' collection. With subtle tweaks on athletic styles, you can expect smooth jersey on the outside and a cosy brushed inside, with this quarter-zip sweatshirt being ideal for pulling on for post-workout chills or weekend adventures. It may be cropped in fit but its sleeves, collar and body make up for it in volume, with elongated ribbing offering structure.",
+        "color": "Black & Sail",
+        "filterColor": "black",
+        "price": 69,
+        "brand": "Nike",
+        "sizes": [ "xs", "s"],
+        "category": "fleece"
     },
     {
         "id": "21",
         "imageUrl": [
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/4/24-01-2024-JC_NU23FWSG00271_2_1.jpg",
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/4/24-01-2024-JC_NU23FWSG00271_m6_1.jpg"
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/1/21-02-24-SI_FN7661-386_m1_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/1/21-02-24-SI_FN7661-386_2_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/1/21-02-24-SI_FN7661-386_3_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/1/21-02-24-SI_FN7661-386_8_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/1/21-02-24-SI_FN7661-386_9_1.jpg"
         ],
-        "name": "Nanushka Kadee Crochet Sunglasses",
-        "color": "Shell",
-        "filterColor": "beidge",
+        "name": "NIKE X NOCTA CARDINAL STOCK FLEECE PANT",
+        "description": "NOCTA's Cardinal Stock collection puts versatility and simplicity at the forefront, blurring boundaries between sports gear and global street uniforms. This fleece pant from the latest drop keeps you right in your comfort zone with its soft jersey, minimalist printed branding and subtle piping that extends up the leg and across the back.",
+        "color": "Oil Green & Light Liquid Lime",
+        "filterColor": "green",
         "price": 269,
-        "brand": "Nanushka Kadee",
-        "sizes": ["xs", "s", "m", "l", "xl", "xxl"],
-        "category": "sunglasses"
+        "brand": "Nike",
+        "sizes": [ "xs", "s", "m", "l", "xl", "xxl"],
+        "category": "pant"
     },
     {
         "id": "22",
         "imageUrl": [
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/1/9/19-01-2024-AJ_2411070_1_1.jpg",
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/1/9/19-01-2024-AJ_2411070_m9_1.jpg"
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/3/1/31-01-2024-JA_FD4274-077_1_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/3/1/31-01-2024-JA_FD4274-077_7_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/3/1/31-01-2024-JA_FD4274-077_8_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/3/1/31-01-2024-JA_FD4274-077_m9_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/3/1/31-01-2024-JA_FD4274-077_10_1.jpg"
         ],
-        "name": "Daily Paper Zoe Open Back Hoodie",
-        "color": "Black",
-        "filterColor": "black",
-        "price": 115,
-        "brand": "Daily Paper",
-        "sizes": ["xs", "m", "l"],
-        "category": "hoodie"
+        "name": "NIKE NSW COZY KNIT BRA",
+        "description": "Nike redefines loungewear with this cosy knit bra. With a luxurious bouclé knit, scattered with the iconic Swoosh, pull this on for chills at home or layer up for running errands and pair with the Nike NSW Cosy Knit Pant.",
+        "color": "Light Smoke Grey & Photon Dust",
+        "filterColor": "grey",
+        "price": 45,
+        "brand": "Nike",
+        "sizes": [ "xs", "m", "l"],
+        "category": "tanktop"
     },
     {
         "id": "23",
         "imageUrl": [
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/1/9/19-01-2024-AJ_2412028_1_1.jpg",
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/1/9/19-01-2024-AJ_2412028_m9_1.jpg"
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/9/29_02_2024_JD_FD6423-010_m1_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/9/29_02_2024_JD_FD6423-010_2_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/9/29_02_2024_JD_FD6423-010_3_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/9/29_02_2024_JD_FD6423-010_8_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/9/29_02_2024_JD_FD6423-010_m1_1.jpg"
         ],
-        "name": "Daily Paper Erib Tanktop",
-        "color": "Icing Yellow",
-        "filterColor": "beidge",
-        "price": 45,
-        "brand": "Daily Paper",
-        "sizes": ["xs", "s"],
-        "category": "tanktop"
+        "name": "NIKE EVERY STITCH CONSIDERED REVERSEABLE INSULATED TOP",
+        "description": "Nike’s Every Stitch Considered collection continues to grow with this Reversible Insulated Top. Exemplifying its ethos as a modern take on traditional luxury, this elevated essential is expertly crafted with an insulated durable fabric blend - while its namesake reversible structure enhances versatility, making it an indisputable year-round icon. What more could you ask for?",
+        "color": "Black",
+        "filterColor": "black",
+        "price": 320,
+        "brand": "Nike",
+        "sizes": [ "xs", "s"],
+        "category": "top"
     },
     {
         "id": "24",
         "imageUrl": [
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/4/24-01-24-TC_YY241PT019-BL_1_1.jpg",
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/4/24-01-24-TC_YY241PT019-BL_m9_1.jpg"
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/0/20-03-2023_NS_DK0A4Y1SKHK1_1_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/0/20-03-2023_NS_DK0A4Y1SKHK1_7_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/0/20-03-2023_NS_DK0A4Y1SKHK1_9_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/0/20-03-2023_NS_DK0A4Y1SKHK1_m8_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/0/20-03-2023_NS_DK0A4Y1SKHK1_6_1.jpg"
         ],
-        "name": "OPEN YY Cargo Pocket Jeans",
-        "color": "Blue",
-        "filterColor": "blue",
-        "price": 429,
-        "brand": "OPEN YY",
-        "sizes": ["xs", "l"],
-        "category": "jeans"
+        "name": "DICKIES ELIZAVILLE MINI SKIRT",
+        "description": "Dickies looks to vintage sportswear styles for inspiration for this preppy piece. The Elizaville mini skirt is crafted from durable poly-cotton, designed to stand the test of time. Style with your favourite skater-approved sneakers and ankle socks for an effortlessly cool, retro look.",
+        "color": "Khaki",
+        "filterColor": "beidge",
+        "price": 45,
+        "brand": "Dickies",
+        "sizes": [ "xs", "l"],
+        "category": "skirt"
     },
     {
         "id": "25",
         "imageUrl": [
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/4/24-01-2024-JC_SS24-STRVEST0CRE_1_1.jpg",
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/5/25_01_2024_jd_ss24-strvest0cre_m9.jpg"
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/0/2/02-10-2023-JWx_DK0A4YGNG071_1_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/0/2/02-10-2023-JWx_DK0A4YGNG071_7_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/0/2/02-10-2023-JWx_DK0A4YGNG071_m8_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/0/2/02-10-2023-JWx_DK0A4YGNG071_9_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/0/2/02-10-2023-JWx_DK0A4YGNG071_6_1.jpg"
         ],
-        "name": "KNWLS Stray Vest",
-        "color": "Cream",
-        "filterColor": "beidge",
-        "price": 485,
-        "brand": "KNWLS",
-        "sizes": ["l", "xl", "xxl"],
-        "category": "top"
+        "name": "DICKIES MOUNT HOPE FLEECE",
+        "description": "This Mount Hope Fleece from Dickies - renowned for quality since 1922 - offers the ultimate winter comfort. Its soft texture and versatile design make it a non-negotiable addition to your seasonal style, while the ever-iconic logo seals the look with brand approval at the chest.",
+        "color": "Trooper",
+        "filterColor": "blue",
+        "price": 95,
+        "brand": "Dickies",
+        "sizes": [ "l", "xl", "xxl"],
+        "category": "fleece"
     },
     {
         "id": "26",
         "imageUrl": [
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/4/24-01-2024-JC_SS24-TURDR0INK_1_1.jpg",
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/4/24-01-2024-JC_SS24-TURDR0INK_m9_1.jpg"
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/1/2/12-07-2023-JWx_DK0A4XJTBLK1_1_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/1/2/12-07-2023-JWx_DK0A4XJTBLK1_6_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/1/2/12-07-2023-JWx_DK0A4XJTBLK1_7_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/1/2/12-07-2023-JWx_DK0A4XJTBLK1_m8_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/1/2/12-07-2023-JWx_DK0A4XJTBLK1_9_1.jpg"
         ],
-        "name": "KNWLS Turbo Dress",
-        "color": "Blue",
-        "filterColor": "blue",
-        "price": 309,
-        "brand": "KNWLS",
-        "sizes": ["xs", "s", "l", "xl", "xxl"],
-        "category": "dress"
+        "name": "DICKIES OAKPORT CROPPED HOODIE",
+        "description": "This all-black Oakport hoody from Dickies is the cosy layering piece you need for the transitioning seasons. Cut from a super-soft cotton blend, it arrives in a cropped, relaxed fit and features a classic drawstring hood and the label’s iconic logo stitched on the chest. Team yours with a pair of jeans or joggers for a comfy off-duty ‘fit.",
+        "color": "Black",
+        "filterColor": "black",
+        "price": 59,
+        "brand": "Dickies",
+        "sizes": [ "xs", "s", "l", "xl", "xxl"],
+        "category": "hoodie"
     },
     {
         "id": "27",
         "imageUrl": [
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/3/23-01-2024-LB_JAAW2314CR-NEU_1_1.jpg",
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/3/23-01-2024-LB_JAAW2314CR-NEU_m8_1.jpg"
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/9/29-01-2024-JC_SS24-ACT0ACFL_1_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/9/29-01-2024-JC_SS24-ACT0ACFL_8_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/9/29-01-2024-JC_SS24-ACT0ACFL_m9_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/9/29-01-2024-JC_SS24-ACT0ACFL_10_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/2/9/29-01-2024-JC_SS24-ACT0ACFL_7_1.jpg"
         ],
-        "name": "Sporty & Rich Crown LA Puffer Jacket",
-        "color": "Cream",
-        "filterColor": "beidge",
-        "price": 397,
-        "brand": "Sporty & Rich",
-        "sizes": ["m", "l", "xl", "xxl"],
-        "category": "jacket"
+        "name": "KNWLS ANTI CROSS OVER TOP",
+        "description": "The SS24 collection from KNWLS is all about the thrill of the ride, drawing inspiration from the high-octane world of motorcycle racing. Standout pieces like the Anti Cross Over Top cling to the body with a semi-transparent mesh. It's accented with audacious cutouts around the front and underarms, while an elastic waist ensures a form-fitting silhouette.",
+        "color": "Acid Flame",
+        "filterColor": "brown",
+        "price": 245,
+        "brand": "KNWLS",
+        "sizes": [ "m", "l", "xl", "xxl"],
+        "category": "top"
     },
     {
         "id": "28",
         "imageUrl": [
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/4/24_01_2024_JD_DRAW232FO-GRN_1_1.jpg",
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/4/24_01_2024_JD_DRAW232FO-GRN_m8_1.jpg"
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/0/1/01-03-24-TC_J02NC0183-J20140-266_1_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/0/1/01-03-24-TC_J02NC0183-J20140-266_6_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/0/1/01-03-24-TC_J02NC0183-J20140-266_7_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/0/1/01-03-24-TC_J02NC0183-J20140-266_m8_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/0/1/01-03-24-TC_J02NC0183-J20140-266_9_1.jpg"
         ],
-        "name": "Sporty & Rich SRC Tennis Dress",
-        "color": "Forest",
-        "filterColor": "green",
-        "price": 224,
-        "brand": "Sporty & Rich",
-        "sizes": ["xs", "l", "xxl"],
-        "category": "dress"
+        "name": "JIL SANDER SHORT SLEEVE POLO TOP",
+        "description": "Welcome Jil Sander’s signature minimalism into your wardrobe with this Short Sleeve Polo Top. Exemplifying the label’s unparalleled craftsmanship, it’s made from a premium fabric blend and structured with a traditionally tailored polo neckline - resulting in a contemporary take on your smart-casual classics.",
+        "color": "Champagne",
+        "filterColor": "yellow",
+        "price": 300,
+        "brand": "JIL Sander",
+        "sizes": [ "xs", "l", "xxl"],
+        "category": "t-shirt"
     },
     {
         "id": "29",
         "imageUrl": [
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/4/24-01-2024-JC_SS24-TURDR0INK_1_1.jpg",
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/4/24-01-2024-JC_SS24-TURDR0INK_m9_1.jpg"
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/1/9/19-02-24-SI_J40KA0185-J20148-100_1_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/1/9/19-02-24-SI_J40KA0185-J20148-100_6_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/1/9/19-02-24-SI_J40KA0185-J20148-100_7_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/1/9/19-02-24-SI_J40KA0185-J20148-100_m8_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/1/9/19-02-24-SI_J40KA0185-J20148-100_9_1.jpg"
         ],
-        "name": "KNWLS Turbo Dress",
-        "color": "Blue",
-        "filterColor": "blue",
-        "price": 309,
-        "brand": "KNWLS",
-        "sizes": ["xs", "s", "l", "xl", "xxl"],
-        "category": "dress"
+        "name": "JIL SANDER+ WIDE LEG CASUAL TROUSERS",
+        "description": "Jil Sander+ takes things back to basics with these Wide Leg Casual Trousers. Carefully crafted from soft cotton, this contemporary silhouette offers plenty of versatility with a monochrome colourway - while silver-tone hardware accents the belted waist feature. Perfect.",
+        "color": "Optic White",
+        "filterColor": "white",
+        "price": 450,
+        "brand": "JIL Sander",
+        "sizes": [ "xs", "s", "l", "xl", "xxl"],
+        "category": "pant"
     },
     {
         "id": "30",
         "imageUrl": [
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/3/23-01-2024-LB_JAAW2314CR-NEU_1_1.jpg",
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/3/23-01-2024-LB_JAAW2314CR-NEU_m8_1.jpg"
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/1/9/19-02-24-SI_J40BN0156-J20088-106_1_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/1/9/19-02-24-SI_J40BN0156-J20088-106_6_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/1/9/19-02-24-SI_J40BN0156-J20088-106_7_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/1/9/19-02-24-SI_J40BN0156-J20088-106_m8_1.jpg",
+            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_768/prodmedia/media/catalog/product/1/9/19-02-24-SI_J40BN0156-J20088-106_9_1.jpg"
         ],
-        "name": "Sporty & Rich Crown LA Puffer Jacket",
-        "color": "Cream",
+        "name": "JIL SANDER+ ZIP FRONT FLEECE JACKET",
+        "description": "Jil Sander+ has prioritised a wardrobe made for life outside the city since its debut Fall/Winter 2019 collection - an approach we continue to admire thanks to this Zip Front Fleece Jacket. Expertly crafted from soft cotton, this versatile layer is accented with a carefully crochet zip-pull and spacious pockets for enhanced fashion and functionality to see you through the seasons in style.",
+        "color": "Eggshell",
         "filterColor": "beidge",
-        "price": 397,
-        "brand": "Sporty & Rich",
-        "sizes": ["m", "l", "xl", "xxl"],
+        "price": 900,
+        "brand": "JIL Sander",
+        "sizes": [ "m", "l", "xl", "xxl"],
         "category": "jacket"
-    },
-    {
-        "id": "31",
-        "imageUrl": [
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/4/24_01_2024_JD_DRAW232FO-GRN_1_1.jpg",
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/4/24_01_2024_JD_DRAW232FO-GRN_m8_1.jpg"
-        ],
-        "name": "Sporty & Rich SRC Tennis Dress",
-        "color": "Forest",
-        "filterColor": "green",
-        "price": 224,
-        "brand": "Sporty & Rich",
-        "sizes": ["xs", "l", "xxl"],
-        "category": "dress"
-    },
-    {
-        "id": "32",
-        "imageUrl": [
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/3/23-01-24-ns_36200-0316_1.jpg",
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/3/23-01-24-ns_36200-0316_m9.jpg"
-        ],
-        "name": "Levis Vintage Clothing 501® Cropped Jeans",
-        "color": "Never Fade",
-        "filterColor": "blue",
-        "price": 100,
-        "brand": "Levis",
-        "sizes": ["s", "m", "l", "xl"],
-        "category": "jeans"
-    },
-    {
-        "id": "33",
-        "imageUrl": [
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/5/25-01-2024-AJ_24PSW0077FA-B1M01E-23EC_1_1.jpg",
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/5/25-01-2024-AJ_24PSW0077FA-B1M01E-23EC_m9_1.jpg"
-        ],
-        "name": "Isabel Marant Maeva logo hoodie",
-        "color": "Ecru",
-        "filterColor": "beidge",
-        "price": 255,
-        "brand": "Isabel Marant",
-        "sizes": ["s", "m", "l"],
-        "category": "hoodie"
-    },
-    {
-        "id": "34",
-        "imageUrl": [
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/5/25-01-24-NS_24PCJU500CO0487-P483_1_1.jpg",
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/5/25-01-24-NS_24PCJU500CO0487-P483_m9_1.jpg"
-        ],
-        "name": "Paco Rabanne Monogram Denim Skirt",
-        "color": "Blue",
-        "filterColor": "blue",
-        "price": 520,
-        "brand": "Paco Rabanne",
-        "sizes": ["xs", "s", "m", "l"],
-        "category": "skirt"
-    },
-    {
-        "id": "35",
-        "imageUrl": [
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/3/23_01_2024_JD_JAAW2336CH-BRO_1_1.jpg",
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/3/23_01_2024_JD_JAAW2336CH-BRO_m8_1.jpg"
-        ],
-        "name": "Sporty & Rich Zipped Polar Fleece Vest",
-        "color": "Chocolate",
-        "filterColor": "brown",
-        "price": 214,
-        "brand": "Sporty & Rich",
-        "sizes": ["xs", "s", "xl", "xxl"],
-        "category": "vest"
-    },
-    {
-        "id": "36",
-        "imageUrl": [
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/5/25-01-24-NS_NW24RSOW00499_1_1.jpg",
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/5/25-01-24-NS_NW24RSOW00499_m9_1.jpg"
-        ],
-        "name": "Nanushka Hollie Leather Look Jacket",
-        "color": "Black and Creame",
-        "filterColor": "black",
-        "price": 759,
-        "brand": "Nanushka Hollie",
-        "sizes": ["xs", "s", "m"],
-        "category": "jacket"
-    },
-    {
-        "id": "37",
-        "imageUrl": [
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/1/9/19-01-2024-SI_2411092_1_1.jpg",
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/1/9/19-01-2024-SI_2411092_m9_1.jpg"
-        ],
-        "name": "Daily Paper Avery Denim Jacket",
-        "color": "White & Blue",
-        "filterColor": "blue",
-        "price": 145,
-        "brand": "Daily Paper",
-        "sizes": ["xs", "s"],
-        "category": "jacket"
-    },
-    {
-        "id": "38",
-        "imageUrl": [
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/4/24-01-2024-JC_NU23FWSG00271_2_1.jpg",
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/4/24-01-2024-JC_NU23FWSG00271_m6_1.jpg"
-        ],
-        "name": "Nanushka Kadee Crochet Sunglasses",
-        "color": "Shell",
-        "filterColor": "beidge",
-        "price": 269,
-        "brand": "Nanushka Kadee",
-        "sizes": ["xs", "s", "m", "l", "xl", "xxl"],
-        "category": "sunglasses"
-    },
-    {
-        "id": "39",
-        "imageUrl": [
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/1/9/19-01-2024-AJ_2411070_1_1.jpg",
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/1/9/19-01-2024-AJ_2411070_m9_1.jpg"
-        ],
-        "name": "Daily Paper Zoe Open Back Hoodie",
-        "color": "Black",
-        "filterColor": "black",
-        "price": 115,
-        "brand": "Daily Paper",
-        "sizes": ["xs", "m", "l"],
-        "category": "hoodie"
-    },
-    {
-        "id": "40",
-        "imageUrl": [
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/1/9/19-01-2024-AJ_2412028_1_1.jpg",
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/1/9/19-01-2024-AJ_2412028_m9_1.jpg"
-        ],
-        "name": "Daily Paper Erib Tanktop",
-        "color": "Icing Yellow",
-        "filterColor": "beidge",
-        "price": 45,
-        "brand": "Daily Paper",
-        "sizes": ["xs", "s"],
-        "category": "tanktop"
-    },
-    {
-        "id": "41",
-        "imageUrl": [
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/4/24-01-24-TC_YY241PT019-BL_1_1.jpg",
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/4/24-01-24-TC_YY241PT019-BL_m9_1.jpg"
-        ],
-        "name": "OPEN YY Cargo Pocket Jeans",
-        "color": "Blue",
-        "filterColor": "blue",
-        "price": 429,
-        "brand": "OPEN YY",
-        "sizes": ["xs", "l"],
-        "category": "jeans"
-    },
-    {
-        "id": "42",
-        "imageUrl": [
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/4/24-01-2024-JC_SS24-STRVEST0CRE_1_1.jpg",
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/5/25_01_2024_jd_ss24-strvest0cre_m9.jpg"
-        ],
-        "name": "KNWLS Stray Vest",
-        "color": "Cream",
-        "filterColor": "beidge",
-        "price": 485,
-        "brand": "KNWLS",
-        "sizes": ["l", "xl", "xxl"],
-        "category": "top"
-    },
-    {
-        "id": "43",
-        "imageUrl": [
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/4/24-01-2024-JC_SS24-TURDR0INK_1_1.jpg",
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/4/24-01-2024-JC_SS24-TURDR0INK_m9_1.jpg"
-        ],
-        "name": "KNWLS Turbo Dress",
-        "color": "Blue",
-        "filterColor": "blue",
-        "price": 309,
-        "brand": "KNWLS",
-        "sizes": ["xs", "s", "l", "xl", "xxl"],
-        "category": "dress"
-    },
-    {
-        "id": "44",
-        "imageUrl": [
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/3/23-01-2024-LB_JAAW2314CR-NEU_1_1.jpg",
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/3/23-01-2024-LB_JAAW2314CR-NEU_m8_1.jpg"
-        ],
-        "name": "Sporty & Rich Crown LA Puffer Jacket",
-        "color": "Cream",
-        "filterColor": "beidge",
-        "price": 397,
-        "brand": "Sporty & Rich",
-        "sizes": ["m", "l", "xl", "xxl"],
-        "category": "jacket"
-    },
-    {
-        "id": "45",
-        "imageUrl": [
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/4/24_01_2024_JD_DRAW232FO-GRN_1_1.jpg",
-            "https://media.endclothing.com/media/f_auto,q_auto:eco,w_375/prodmedia/media/catalog/product/2/4/24_01_2024_JD_DRAW232FO-GRN_m8_1.jpg"
-        ],
-        "name": "Sporty & Rich SRC Tennis Dress",
-        "color": "Forest",
-        "filterColor": "green",
-        "price": 224,
-        "brand": "Sporty & Rich",
-        "sizes": ["xs", "l", "xxl"],
-        "category": "dress"
     }
 ]
