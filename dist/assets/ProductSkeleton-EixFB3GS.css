@@ -1,1 +1,0 @@
-.product{color:#000;text-align:center}.product-image-block{width:100%;position:relative}.product-image-block:hover .product-image:last-child{position:absolute;left:0;top:0;z-index:0}.product-image{width:100%;object-fit:cover}.product-image:last-child{position:absolute;left:0;top:0;z-index:-10}.product-name{font-family:BebasNeue;font-size:20px;margin:10px 0}
