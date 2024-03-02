@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Tabs, Tab } from "@mui/material";
-import { a11yProps } from "entities/tabs/model";
 
 import CustomTabsBox from "shared/ui/customTabsBox/CustomTabsBox";
 
@@ -14,6 +13,13 @@ const ProductTabs = ({ description }: ProductTabs) => {
     const handleChange = (_event: React.SyntheticEvent, newValue: number) => {
         setValue(newValue);
     };
+
+    function a11yProps(index: number) {
+        return {
+            id: `simple-tab-${index}`,
+            "aria-controls": `simple-tabpanel-${index}`,
+        };
+    }
 
     const tabNames: string[] = ["description", "sizing", "shipping", "returns"];
 

@@ -1,11 +1,11 @@
-import DeleteIcon from "@mui/icons-material/Delete";
 import { useDispatch } from "react-redux";
-import { removeItem } from "app/store/slices/cartSlice/cartSlice";
+import DeleteIcon from "@mui/icons-material/Delete";
 
+import { removeCartItem } from "app/store/slices/cartSlice/cartSlice";
+import ChangeQuantity from "features/changeQuantity/ChangeQuantity";
 import type { CartProductData } from "shared/interfaces";
 
 import "./styles.scss";
-import ChangeQuantity from "features/changeQuantity/ChangeQuantity";
 
 interface CartProductProps {
     cartProduct: CartProductData;
@@ -29,7 +29,7 @@ const CartProduct: React.FC<CartProductProps> = ({ cartProduct }) => {
                 </div>
             </div>
             <button
-                onClick={() => dispatch(removeItem(cartProduct))}
+                onClick={() => dispatch(removeCartItem(cartProduct))}
                 className="cart-product__button"
             >
                 <DeleteIcon />

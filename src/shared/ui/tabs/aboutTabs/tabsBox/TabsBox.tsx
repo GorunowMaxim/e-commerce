@@ -1,7 +1,8 @@
 import { Accordion, AccordionDetails, AccordionSummary } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import CustomTabsBox from "shared/ui/customTabsBox/CustomTabsBox";
-import { aboutText } from "../../../../../../public/texts/text";
+import aboutText from '../../../../../../public/texts/text'
+
 
 interface AccordionData {
     [index: string]: {

@@ -22,7 +22,7 @@ export const cartSlice = createSlice({
         addToCart(state) {
             if(state.currentCartProduct) state.products.push(state.currentCartProduct);
         },
-        removeItem(state, action: PayloadAction<CartProductData>) {
+        removeCartItem(state, action: PayloadAction<CartProductData>) {
             state.products = state.products.filter(
                 (product) =>
                     product?.size !== action.payload.size ||
@@ -52,7 +52,7 @@ export const cartSlice = createSlice({
     },
 });
 
-export const { setCurrentCartProduct, addToCart, removeItem, incrementQuantity, decrementQuantity } =
+export const { setCurrentCartProduct, addToCart, removeCartItem, incrementQuantity, decrementQuantity } =
     cartSlice.actions;
 
 export default cartSlice.reducer;

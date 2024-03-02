@@ -1,8 +1,7 @@
 import SwiperContainer from "shared/ui/customSwiper/swiperContainer/swiperContainer";
 import CustomSwiper from "shared/ui/customSwiper/CustomSwiper";
 import CategoriesSection from "entities/categories/CategoriesSection";
-import SupportSection from "entities/support/SupportSection/SupportSection";
-import SupportCard from "entities/support/supportCard/SupportCard";
+import SupportCard from "shared/ui/supportCard/SupportCard";
 
 import heroVideo from "/public/video/heroVideo.mp4";
 import HelpIcon from "@mui/icons-material/Help";
@@ -49,23 +48,27 @@ const Home: React.FC = () => (
                 direction={false}
             />
         </SwiperContainer>
-        <SupportSection>
-            <SupportCard
-                icon={<CheckroomIcon />}
-                headline={"How to make an order"}
-                text={"Detailed instructions for new clients"}
-            />
-            <SupportCard
-                icon={<HelpIcon />}
-                headline={"Questions and answers"}
-                text={"All about shipping, returns and duties"}
-            />
-            <SupportCard
-                icon={<SmsIcon />}
-                headline={"Need help?"}
-                text={"Contact our customer service"}
-            />
-        </SupportSection>
+        <section className="support">
+            <div className="container">
+                <div className="support-wrapper">
+                    <SupportCard
+                        icon={<CheckroomIcon />}
+                        headline={"How to make an order"}
+                        text={"Detailed instructions for new clients"}
+                    />
+                    <SupportCard
+                        icon={<HelpIcon />}
+                        headline={"Questions and answers"}
+                        text={"All about shipping, returns and duties"}
+                    />
+                    <SupportCard
+                        icon={<SmsIcon />}
+                        headline={"Need help?"}
+                        text={"Contact our customer service"}
+                    />
+                </div>
+            </div>
+        </section>
     </main>
 );
 

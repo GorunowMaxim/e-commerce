@@ -15,13 +15,15 @@ const SearchItem = ({ searchItem, setOverlayState }: SearchItemProps) => {
     const { id, imageUrl, name } = searchItem;
     const dispatch = useDispatch();
 
+    const handleClickLink = () => {
+        dispatch(changeSearchUiState());
+        dispatch(changeOverlayState());
+        setOverlayState(false);
+    }
+
     return (
         <Link
-            onClick={() => {
-                dispatch(changeSearchUiState());
-                dispatch(changeOverlayState());
-                setOverlayState(false);
-            }}
+            onClick={() => handleClickLink()}
             to={`/product/${id}`}
             className="search-item"
         >

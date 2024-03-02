@@ -1,4 +1,4 @@
-import FilterContainer from "entities/filterContainer/FilterCategory";
+import ContainerFilterCategory from "entities/containerFilterCategory/ContainerFilterCategory";
 
 import "./styles.scss";
 import {
@@ -72,7 +72,7 @@ const Filter = ({ url, filterState, setFilterState }: FilterProps) => {
                 </button>
             </div>
             <div className="filter-wrapper">
-                <FilterContainer nameCategory="Brands">
+                <ContainerFilterCategory nameCategory="Brands">
                     <div className="filter-form filter-form_flex">
                         {optionValues.brands.map((brand, index) => {
                             return (
@@ -98,8 +98,8 @@ const Filter = ({ url, filterState, setFilterState }: FilterProps) => {
                             );
                         })}
                     </div>
-                </FilterContainer>
-                <FilterContainer nameCategory="Colors">
+                </ContainerFilterCategory>
+                <ContainerFilterCategory nameCategory="Colors">
                     <div className="filter-form filter-form_flex">
                         {optionValues.colors.map((color, index) => {
                             return (
@@ -125,8 +125,8 @@ const Filter = ({ url, filterState, setFilterState }: FilterProps) => {
                             );
                         })}
                     </div>
-                </FilterContainer>
-                <FilterContainer nameCategory="sizes">
+                </ContainerFilterCategory>
+                <ContainerFilterCategory nameCategory="sizes">
                     <div className="filter-form filter-form_grid">
                         {optionValues.sizes.map((size, index) => {
                             return (
@@ -150,10 +150,10 @@ const Filter = ({ url, filterState, setFilterState }: FilterProps) => {
                             );
                         })}
                     </div>
-                </FilterContainer>
-                <FilterContainer nameCategory="Price" visible={true}>
+                </ContainerFilterCategory>
+                <ContainerFilterCategory nameCategory="Price" visible={true}>
                     <ChangePrice url={url} value={value} setValue={setValue} />
-                </FilterContainer>
+                </ContainerFilterCategory>
                 <button
                     onClick={() => {
                         setSelectedStateColor("");

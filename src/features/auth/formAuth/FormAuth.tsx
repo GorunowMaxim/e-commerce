@@ -1,15 +1,15 @@
+import {
+    useForm,
+    SubmitHandler,
+    UseFormRegister,
+    FieldErrors,
+} from "react-hook-form";
 import { useDispatch } from "react-redux";
-import { changeOverlayState } from "app/store/slices/overlaySlice/overlaySlice";
-import { useForm, SubmitHandler } from "react-hook-form";
 
-import CloseIcon from "@mui/icons-material/Close";
+import { changeOverlayState } from "app/store/slices/overlaySlice/overlaySlice";
+import CloseButton from "shared/ui/closeButton/CloseButton";
 
 import "./styles.scss";
-
-interface FormInputValue {
-    email: string;
-    password: string;
-}
 
 interface FormAuthProps {
     onClick: (boolean: boolean) => void;
@@ -37,6 +37,48 @@ const formConfigData: FormConfigData = {
     },
 };
 
+type FormInputValue = {
+    email: string;
+    password: string;
+};
+
+type FieldData = {
+    name: "email" | "password";
+    value: RegExp;
+    message: string;
+};
+
+interface InputFieldProps {
+    register: UseFormRegister<FormInputValue>;
+    fieldData: FieldData;
+    errors: FieldErrors<FormInputValue>;
+}
+
+const InputField = ({ register, fieldData, errors }: InputFieldProps) => {
+    return (
+        <label className="aut-form__label">
+            <p className="aut-form__label-text">{fieldData.name}</p>
+            <input
+                {...register(fieldData.name, {
+                    required: "This is a required field",
+                    pattern: {
+                        value: fieldData.value,
+                        message: fieldData.message,
+                    },
+                })}
+                placeholder={`enter your ${fieldData.name}`}
+                type={fieldData.name}
+                className="aut-form__input"
+            />
+            {errors[fieldData.name] && (
+                <p className="aut-form__fail">
+                    {errors[fieldData.name]?.message}
+                </p>
+            )}
+        </label>
+    );
+};
+
 const FormAuth = ({ onClick }: FormAuthProps) => {
     const dispatch = useDispatch();
 
@@ -47,18 +89,18 @@ const FormAuth = ({ onClick }: FormAuthProps) => {
     } = useForm<FormInputValue>({ mode: "onBlur" });
     const onSubmit: SubmitHandler<FormInputValue> = (data) => console.log(data);
 
+    const handleClickCloseButton = () => {
+        onClick(false);
+        dispatch(changeOverlayState());
+    };
+
     return (
         <div className="aut-form">
             <div className="aut-form__wrapper">
-                <button
-                    className="aut-form__button-close"
-                    onClick={() => {
-                        onClick(false);
-                        dispatch(changeOverlayState());
-                    }}
-                >
-                    <CloseIcon />
-                </button>
+                <CloseButton
+                    className={"aut-form__button-close"}
+                    onClick={handleClickCloseButton}
+                />
                 <div className="aut-form__content">
                     <h4>log in or register</h4>
                     <form
@@ -66,34 +108,14 @@ const FormAuth = ({ onClick }: FormAuthProps) => {
                         className="aut-form__body"
                     >
                         {Object.keys(formConfigData).map((el, index) => {
+                            const fieldData = formConfigData[el];
                             return (
-                                <label key={index} className="aut-form__label">
-                                    <p className="aut-form__label-text">
-                                        {formConfigData[el].name}
-                                    </p>
-                                    <input
-                                        {...register(formConfigData[el].name, {
-                                            required:
-                                                "This is a required field",
-                                            pattern: {
-                                                value: formConfigData[el].value,
-                                                message:
-                                                    formConfigData[el].message,
-                                            },
-                                        })}
-                                        placeholder={`enter your ${formConfigData[el].name}`}
-                                        type={formConfigData[el].name}
-                                        className="aut-form__input"
-                                    />
-                                    {errors[formConfigData[el].name] && (
-                                        <p className="aut-form__fail">
-                                            {
-                                                errors[formConfigData[el].name]
-                                                    ?.message
-                                            }
-                                        </p>
-                                    )}
-                                </label>
+                                <InputField
+                                    key={index}
+                                    fieldData={fieldData}
+                                    register={register}
+                                    errors={errors}
+                                />
                             );
                         })}
                         <button

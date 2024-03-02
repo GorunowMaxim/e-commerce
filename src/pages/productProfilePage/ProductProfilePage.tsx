@@ -11,7 +11,7 @@ import SwiperContainer from "shared/ui/customSwiper/swiperContainer/swiperContai
 import CustomSwiper from "shared/ui/customSwiper/CustomSwiper";
 import ProductSwiper from "shared/ui/productSwiper/ProductSwiper";
 import SingleProductSkeleton from "shared/ui/skeletons/singleProductSkeleton/SingleProductSkeleton";
-import ProductTabs from "entities/tabs/ui/productPageTabs/ProductTabs";
+import ProductTabs from "shared/ui/tabs/productPageTabs/ProductTabs";
 import { SwiperSlide } from "swiper/react";
 import AddToCart from "features/addToCart/AddToCart";
 import ChooseSize from "features/chooseSize/ChooseSize";

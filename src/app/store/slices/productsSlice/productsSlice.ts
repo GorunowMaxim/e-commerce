@@ -1,8 +1,10 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { startLoading, getSuccess, hasError } from "../mainSlice/mainSlice";
-import type { PayloadAction } from "@reduxjs/toolkit";
-import type { ProductData } from "shared/interfaces";
 import axios from "axios";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import type { PayloadAction } from "@reduxjs/toolkit";
+
+import { startLoading, getSuccess, hasError } from "../mainSlice/mainSlice";
+
+import type { ProductData } from "shared/interfaces";
 
 interface initialProductsState {
     source: ProductData[];
@@ -39,7 +41,6 @@ export const fetchingProducts = createAsyncThunk(
         thunkAPI
     ) => {
         thunkAPI.dispatch(startLoading());
-        console.log('fetching')
         try {
             const response = await axios.get(
                 `${url}?${
@@ -63,9 +64,6 @@ export const productsSlice = createSlice({
     name: "products",
     initialState,
     reducers: {
-        clearProducts(state) {
-            state.source = [];
-        },
         changeFilterConfigBrand(state, action: PayloadAction<string>) {
             state.filterConfig.brand = action.payload;
         },
@@ -76,6 +74,8 @@ export const productsSlice = createSlice({
             state.filterConfig.size = action.payload;
         },
         changeFilterConfigMinPrice(state, action: PayloadAction<number>) {
+            console.log("min-price", state.filterConfig.minPrice);
+            console.log("res", action.payload);
             state.filterConfig.minPrice = action.payload;
         },
         changeFilterConfigMaxPrice(state, action: PayloadAction<number>) {
@@ -111,7 +111,6 @@ export const productsSlice = createSlice({
 });
 
 export const {
-    clearProducts,
     changeFilterConfigBrand,
     changeFilterConfigColor,
     changeFilterConfigSize,

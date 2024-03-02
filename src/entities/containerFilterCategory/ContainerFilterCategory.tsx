@@ -1,17 +1,22 @@
-import { ReactNode, useState } from "react";
 import cn from "classnames";
+
+import { ReactNode, useState } from "react";
 
 import arrow from "/public/images/arrow-up.svg";
 
 import "./styles.scss";
 
-interface Props {
+interface ContainerFilterCategoryProps {
     nameCategory?: string;
-    visible?: boolean,
+    visible?: boolean;
     children: ReactNode;
-};
+}
 
-const FilterContainer = ({ children, nameCategory, visible }: Props) => {
+const ContainerFilterCategory = ({
+    children,
+    nameCategory,
+    visible,
+}: ContainerFilterCategoryProps) => {
     const [state, setState] = useState(false);
     return (
         <div className={cn("category", state ? "category_open" : null)}>
@@ -27,10 +32,18 @@ const FilterContainer = ({ children, nameCategory, visible }: Props) => {
                         alt="arrow-sign"
                     />
                 </div>
-                <div className={cn(visible ? "category-body category-body_visible" : "category-body" )}>{children}</div>
+                <div
+                    className={cn(
+                        visible
+                            ? "category-body category-body_visible"
+                            : "category-body"
+                    )}
+                >
+                    {children}
+                </div>
             </div>
         </div>
     );
 };
 
-export default FilterContainer;
+export default ContainerFilterCategory;

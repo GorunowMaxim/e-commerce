@@ -53,7 +53,7 @@
         overflow-y: auto;
         transition: 0.4s ease;
 
-        &_visible{
+        &_visible {
             overflow: hidden;
         }
     }
@@ -90,12 +90,12 @@
         }
     }
 
-    .category-body{
+    .category-body {
         max-height: 300px;
         transition: 0.4s ease;
         overflow-y: auto;
 
-        &_visible{
+        &_visible {
             overflow: visible;
         }
     }

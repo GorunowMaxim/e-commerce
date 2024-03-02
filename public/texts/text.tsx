@@ -1,4 +1,4 @@
-export const aboutText = {
+const aboutText = {
     contactUs: {
         howToCancel: (
             <div style={{ lineHeight: "150%" }}>
@@ -287,3 +287,5 @@ export const aboutText = {
         ),
     },
 };
+
+export default aboutText;

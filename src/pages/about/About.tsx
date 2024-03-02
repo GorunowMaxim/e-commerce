@@ -1,4 +1,4 @@
-import AboutTabs from "entities/tabs/ui/aboutTabs/AboutTabs";
+import AboutTabs from "shared/ui/tabs/aboutTabs/AboutTabs";
 import "./styles.scss";
 
 const About = () => {

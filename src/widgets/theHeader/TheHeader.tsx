@@ -17,7 +17,6 @@ import "./styles.scss";
 const linksData: { [index: string]: string } = {
     women: "Women",
     men: "Men",
-    sale: "Sale",
     aboutUs: "about",
 };
 

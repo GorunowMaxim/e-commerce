@@ -36,12 +36,12 @@ const ChangePrice = ({ url, value, setValue }: ChangePriceProps) => {
 
     const debouncedDispatch = useRef<(value: number[]) => void>(() => {});
     const location = useLocation();
-    
+
     useEffect(() => {
         debouncedDispatch.current = debounce((value: number[]) => {
             dispatch(changeFilterConfigMinPrice(value[0]));
             dispatch(changeFilterConfigMaxPrice(value[1]));
-            if (location.pathname === '/search-result') {
+            if (location.pathname === "/search-result") {
                 dispatch(
                     fetchingProducts({
                         url,
@@ -59,7 +59,6 @@ const ChangePrice = ({ url, value, setValue }: ChangePriceProps) => {
             }
         }, 1000);
     }, []);
-
 
     const handleChange = (
         _event: Event,
@@ -96,7 +95,7 @@ const ChangePrice = ({ url, value, setValue }: ChangePriceProps) => {
     interface InputsFunctions {
         [index: string]: {
             handleInputChange: (event: ChangeEvent<HTMLInputElement>) => void;
-            changePrice: (num: number) => void;
+            changePrice: (num: number) => { type: string; payload: number };
         };
     }
 
@@ -130,13 +129,11 @@ const ChangePrice = ({ url, value, setValue }: ChangePriceProps) => {
                             className="price-input"
                             size="small"
                             onChange={(e: ChangeEvent<HTMLInputElement>) => {
+                                const rdFunc =
+                                    inputsFunctions[func].changePrice;
                                 inputsFunctions[func].handleInputChange(e);
                                 const fetchDebounced = debounce(() => {
-                                    dispatch(() =>
-                                        inputsFunctions[func].changePrice(
-                                            Number(e.target.value)
-                                        )
-                                    );
+                                    dispatch(rdFunc(Number(e.target.value)));
                                     dispatch(
                                         fetchingProducts({
                                             url,
