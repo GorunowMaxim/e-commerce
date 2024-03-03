@@ -13,6 +13,9 @@ const SubscribeForm = () => {
         formState: { errors },
     } = useForm<Inputs>({ mode: "onBlur" });
     const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+
+    const errorMessage = errors.email?.message;
+
     return (
         <form
             onSubmit={handleSubmit(onSubmit)}
@@ -34,9 +37,7 @@ const SubscribeForm = () => {
                             className="footer-subscribe__form-input"
                         />
                         {errors && (
-                            <p className="fail-message">
-                                {errors.email?.message}
-                            </p>
+                            <p className="fail-message">{errorMessage}</p>
                         )}
                     </div>
                     <button

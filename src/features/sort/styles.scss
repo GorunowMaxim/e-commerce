@@ -74,16 +74,16 @@
     .sort {
         position: inherit;
         z-index: 10000;
-        
-        &_open{
-            .sort-body{
+
+        &_open {
+            .sort-body {
                 display: block;
                 bottom: 0;
                 transition: 0.3s ease;
             }
         }
 
-        &-header{
+        &-header {
             display: none;
         }
 

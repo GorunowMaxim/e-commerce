@@ -1,24 +1,25 @@
-import { ChangeEvent, useEffect, useRef } from "react";
-
+import { useDispatch, useSelector } from "react-redux";
+import { useLocation } from "react-router-dom";
+import { Input } from "@mui/material";
+import debounce from "lodash.debounce";
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
-import { Input } from "@mui/material";
+
+import { ChangeEvent, useEffect, useRef } from "react";
+
+import { AppDispatch, RootState } from "app/store/store";
 import { fetchingProducts } from "app/store/slices/productsSlice/productsSlice";
 import {
     changeFilterConfigMinPrice,
     changeFilterConfigMaxPrice,
 } from "app/store/slices/productsSlice/productsSlice";
-import { useDispatch, useSelector } from "react-redux";
-import { AppDispatch, RootState } from "app/store/store";
-import debounce from "lodash.debounce";
-import "./styles.scss";
-import { useLocation } from "react-router-dom";
 
+import "./styles.scss";
+
+const minDistance = 10;
 function valuetext(value: number) {
     return `$${value}`;
 }
-
-const minDistance = 10;
 
 interface ChangePriceProps {
     url: string;
@@ -26,41 +27,113 @@ interface ChangePriceProps {
     setValue: (arr: number[]) => void;
 }
 
+interface InputsFunctions {
+    [index: string]: {
+        handleInputChange: (value: number) => void;
+        changePrice: (num: number) => { type: string; payload: number };
+    };
+}
+
+interface InputPriceProps {
+    index: number;
+    value: number[];
+    onChangePrice: {
+        handleInputChange: (value: number) => void;
+        changePrice: (num: number) => { type: string; payload: number };
+    };
+    dispatch: AppDispatch;
+    url: string;
+    category: string;
+    currentSearchValue: string;
+    handleBlur: () => void;
+}
+
+const inputProps = {
+    step: 10,
+    min: 0,
+    max: 1000,
+    type: "text",
+    sx: {
+        textAlign: "center",
+        padding: "7px 0px",
+    },
+    "aria-labelledby": "input-slider",
+};
+
+const InputPrice = ({
+    index,
+    value,
+    onChangePrice,
+    dispatch,
+    url,
+    category,
+    currentSearchValue,
+    handleBlur,
+}: InputPriceProps) => {
+    const fetchDebounced = debounce((value: number) => {
+        dispatch(onChangePrice.changePrice(value));
+        dispatch(
+            fetchingProducts({
+                url,
+                category,
+                currentSearchValue,
+            })
+        );
+    }, 1000);
+
+    return (
+        <Input
+            value={`$${value[index]}`}
+            className="price-input"
+            size="small"
+            onChange={(e: ChangeEvent<HTMLInputElement>) => {
+                const valueStr = e.target.value.replace("$", "");
+                const value = Number(valueStr);
+                if (!Number.isNaN(value)) {
+                    onChangePrice.handleInputChange(value);
+                    fetchDebounced(value);
+                }
+            }}
+            onBlur={handleBlur}
+            inputProps={inputProps}
+        />
+    );
+};
+
 const ChangePrice = ({ url, value, setValue }: ChangePriceProps) => {
     const dispatch = useDispatch<AppDispatch>();
-    const { category } = useSelector((state: RootState) => state.categories);
+    const debouncedDispatch = useRef<(value: number[]) => void>(() => {});
+    const location = useLocation();
 
+    const { category } = useSelector((state: RootState) => state.categories);
     const { currentSearchValue } = useSelector(
         (state: RootState) => state.search
     );
 
-    const debouncedDispatch = useRef<(value: number[]) => void>(() => {});
-    const location = useLocation();
-
     useEffect(() => {
         debouncedDispatch.current = debounce((value: number[]) => {
-            dispatch(changeFilterConfigMinPrice(value[0]));
-            dispatch(changeFilterConfigMaxPrice(value[1]));
+            const [minPrice, maxPrice] = value;
+            dispatch(changeFilterConfigMinPrice(minPrice));
+            dispatch(changeFilterConfigMaxPrice(maxPrice));
+
+            const fetchingParam: {
+                url: string;
+                category: string;
+                currentSearchValue?: string;
+            } = {
+                url,
+                category,
+            };
+
             if (location.pathname === "/search-result") {
-                dispatch(
-                    fetchingProducts({
-                        url,
-                        category,
-                        currentSearchValue,
-                    })
-                );
-            } else {
-                dispatch(
-                    fetchingProducts({
-                        url,
-                        category,
-                    })
-                );
+                fetchingParam.currentSearchValue = currentSearchValue;
             }
-        }, 1000);
+
+            dispatch(fetchingProducts(fetchingParam));
+        }, 1500);
     }, []);
 
-    const handleChange = (
+    const handleThumbChange = (
         _event: Event,
         newValue: number | number[],
         activeThumb: number
@@ -78,26 +151,13 @@ const ChangePrice = ({ url, value, setValue }: ChangePriceProps) => {
         }
     };
 
-    const handleInputChange1 = (event: ChangeEvent<HTMLInputElement>) => {
-        setValue([
-            event.target.value === "" ? 0 : Number(event.target.value),
-            value[1],
-        ]);
+    const handleInputChange1 = (changeValue: number) => {
+        setValue([changeValue < 0 ? 0 : changeValue, value[1]]);
     };
 
-    const handleInputChange2 = (event: ChangeEvent<HTMLInputElement>) => {
-        setValue([
-            value[0],
-            event.target.value === "" ? 0 : Number(event.target.value),
-        ]);
+    const handleInputChange2 = (changeValue: number) => {
+        setValue([value[0], changeValue > 1000 ? 1000 : changeValue]);
     };
-
-    interface InputsFunctions {
-        [index: string]: {
-            handleInputChange: (event: ChangeEvent<HTMLInputElement>) => void;
-            changePrice: (num: number) => { type: string; payload: number };
-        };
-    }
 
     const inputsFunctions: InputsFunctions = {
         firstInput: {
@@ -122,40 +182,18 @@ const ChangePrice = ({ url, value, setValue }: ChangePriceProps) => {
         <Box>
             <div className="input-container">
                 {Object.keys(inputsFunctions).map((func, index) => {
+                    const onChangePrice = inputsFunctions[func];
                     return (
-                        <Input
+                        <InputPrice
                             key={index}
-                            value={value[index]}
-                            className="price-input"
-                            size="small"
-                            onChange={(e: ChangeEvent<HTMLInputElement>) => {
-                                const rdFunc =
-                                    inputsFunctions[func].changePrice;
-                                inputsFunctions[func].handleInputChange(e);
-                                const fetchDebounced = debounce(() => {
-                                    dispatch(rdFunc(Number(e.target.value)));
-                                    dispatch(
-                                        fetchingProducts({
-                                            url,
-                                            category,
-                                            currentSearchValue,
-                                        })
-                                    );
-                                }, 1000);
-                                fetchDebounced();
-                            }}
-                            onBlur={handleBlur}
-                            inputProps={{
-                                step: 10,
-                                min: 0,
-                                max: 1000,
-                                type: "text",
-                                style: {
-                                    textAlign: "center",
-                                    padding: "7px 0px",
-                                },
-                                "aria-labelledby": "input-slider",
-                            }}
+                            index={index}
+                            value={value}
+                            onChangePrice={onChangePrice}
+                            dispatch={dispatch}
+                            url={url}
+                            category={category}
+                            currentSearchValue={currentSearchValue}
+                            handleBlur={handleBlur}
                         />
                     );
                 })}
@@ -164,8 +202,9 @@ const ChangePrice = ({ url, value, setValue }: ChangePriceProps) => {
                 sx={{ color: "black" }}
                 getAriaLabel={() => "Minimum distance"}
                 value={value}
-                onChange={handleChange}
+                onChange={handleThumbChange}
                 valueLabelDisplay="auto"
+                valueLabelFormat={valuetext}
                 getAriaValueText={valuetext}
                 disableSwap
                 min={0}

@@ -1,11 +1,11 @@
 import { useDispatch, useSelector } from "react-redux";
-import { setCategories } from "app/store/slices/categoriesSlice/categoriesSlice";
-
 import cn from "classnames";
 
-import "./styles.scss";
 import { RootState } from "app/store/store";
+import { setCategories } from "app/store/slices/categoriesSlice/categoriesSlice";
 import { changeOverlayState } from "app/store/slices/overlaySlice/overlaySlice";
+
+import "./styles.scss";
 
 interface SortProps {
     openSort: boolean;
@@ -13,11 +13,16 @@ interface SortProps {
 }
 
 const Sort = ({ openSort, setOpenSort }: SortProps) => {
+    const dispatch = useDispatch();
     const { category } = useSelector((state: RootState) => state.categories);
 
-    const dispatch = useDispatch();
-
     const categoriesArray: string[] = ["default", "asc", "desc"];
+
+    const selectCategory = (choice: string) => () => {
+        setOpenSort(false);
+        dispatch(setCategories(choice));
+        dispatch(changeOverlayState(false));
+    };
 
     return (
         <div className={cn("sort", openSort ? "sort_open" : null)}>
@@ -33,11 +38,7 @@ const Sort = ({ openSort, setOpenSort }: SortProps) => {
                         <div
                             key={index}
                             id={choice}
-                            onClick={() => {
-                                setOpenSort(false);
-                                dispatch(setCategories(choice));
-                                dispatch(changeOverlayState(false))
-                            }}
+                            onClick={selectCategory(choice)}
                             className="choice text"
                         >
                             <p

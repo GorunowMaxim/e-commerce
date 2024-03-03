@@ -74,8 +74,6 @@ export const productsSlice = createSlice({
             state.filterConfig.size = action.payload;
         },
         changeFilterConfigMinPrice(state, action: PayloadAction<number>) {
-            console.log("min-price", state.filterConfig.minPrice);
-            console.log("res", action.payload);
             state.filterConfig.minPrice = action.payload;
         },
         changeFilterConfigMaxPrice(state, action: PayloadAction<number>) {

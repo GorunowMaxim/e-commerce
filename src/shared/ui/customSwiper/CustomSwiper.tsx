@@ -20,10 +20,10 @@ interface CustomSwiperProps {
 }
 
 const CustomSwiper = ({ url, delay, direction }: CustomSwiperProps) => {
+    const dispatch = useDispatch();
     const { appStatus } = useSelector(
         (state: RootState) => state.app.configState
     );
-    const dispatch = useDispatch();
     const [productsData, setProductsData] = useState<ProductData[]>([]);
     const SwiperModule: [typeof Autoplay] = [Autoplay];
 
@@ -34,7 +34,7 @@ const CustomSwiper = ({ url, delay, direction }: CustomSwiperProps) => {
         slidesPerView: 4,
         speed: 1800,
         breakpoints: {
-            320:{
+            320: {
                 slidesPerView: 2,
                 spaceBetween: 40,
             },
@@ -78,20 +78,19 @@ const CustomSwiper = ({ url, delay, direction }: CustomSwiperProps) => {
             style={{ paddingTop: 50, paddingBottom: 50 }}
         >
             <Swiper {...swiperProps}>
-                {appStatus === "success" &&
-                    productsData.map((product, index) => {
-                        return (
-                            <SwiperSlide key={index}>
-                                <Product product={product} key={index} />
-                            </SwiperSlide>
-                        );
-                    })}
-                {appStatus !== "success" &&
-                    [...new Array(8)].map((_el, index) => (
-                        <SwiperSlide key={index}>
-                            <ProductSkeleton key={index} />
-                        </SwiperSlide>
-                    ))}
+                {appStatus === "success"
+                    ? productsData.map((product, index) => {
+                          return (
+                              <SwiperSlide key={index}>
+                                  <Product product={product} key={index} />
+                              </SwiperSlide>
+                          );
+                      })
+                    : [...new Array(8)].map((_el, index) => (
+                          <SwiperSlide key={index}>
+                              <ProductSkeleton key={index} />
+                          </SwiperSlide>
+                      ))}
             </Swiper>
         </div>
     );

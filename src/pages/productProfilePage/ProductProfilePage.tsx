@@ -28,7 +28,7 @@ const ProductProfilePage = () => {
     const [product, setProduct] = useState<ProductData | null>(null);
 
     useEffect(() => {
-        const fetchData = async () => {
+        const fetchProductData = async () => {
             await axios
                 .get(`https://65c52bc7dae2304e92e4009d.mockapi.io/items/${id}`)
                 .then((response) => {
@@ -36,7 +36,7 @@ const ProductProfilePage = () => {
                     dispatch(getSuccess());
                 });
         };
-        fetchData();
+        fetchProductData();
     }, [id]);
 
     return (
@@ -45,7 +45,7 @@ const ProductProfilePage = () => {
                 <div className="product-wrapper">
                     <div className="product-box">
                         <section className="product-swiper-wrapper">
-                            {appStatus === "success" && (
+                            {appStatus === "success" ? (
                                 <ProductSwiper>
                                     {product?.imageUrl.map((img, index) => (
                                         <SwiperSlide key={index}>
@@ -57,8 +57,7 @@ const ProductProfilePage = () => {
                                         </SwiperSlide>
                                     ))}
                                 </ProductSwiper>
-                            )}
-                            {appStatus === "loading" && (
+                            ) : (
                                 <SingleProductSkeleton />
                             )}
                         </section>

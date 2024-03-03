@@ -10,62 +10,78 @@ import CheckroomIcon from "@mui/icons-material/Checkroom";
 
 import "./styles.scss";
 
+interface SupportData {
+    [name: string]: { icon: JSX.Element; headline: string; text: string };
+}
+
+const supportData: SupportData = {
+    check: {
+        icon: <CheckroomIcon />,
+        headline: "How to make an order",
+        text: "Detailed instructions for new clients",
+    },
+    help: {
+        icon: <HelpIcon />,
+        headline: "Questions and answers",
+        text: "All about shipping, returns and duties",
+    },
+    sms: {
+        icon: <SmsIcon />,
+        headline: "Need help?",
+        text: "Contact our customer service",
+    },
+};
+
 const Home: React.FC = () => (
     <main className="main">
         <section className="hero">
             <video src={heroVideo} autoPlay loop muted></video>
         </section>
         <SwiperContainer headline={"women sale"}>
-            <CustomSwiper
-                url={
-                    "https://65bbca8152189914b5bd1262.mockapi.io/swiper-items?page=1&limit=8"
-                }
-                delay={2500}
-                direction={true}
-            />
-            <CustomSwiper
-                url={
-                    "https://65bbca8152189914b5bd1262.mockapi.io/swiper-items?page=2&limit=8"
-                }
-                delay={2500}
-                direction={false}
-            />
+            {[...Array(2)].map((_swiper, index) => {
+                const direction = index % 2 === 0 ? false : true;
+                return (
+                    <CustomSwiper
+                        key={index}
+                        url={`https://65c52bc7dae2304e92e4009d.mockapi.io/items?page=${
+                            index + 1
+                        }&limit=8`}
+                        delay={2500}
+                        direction={direction}
+                    />
+                );
+            })}
         </SwiperContainer>
         <CategoriesSection />
         <SwiperContainer headline={"man sale"}>
-            <CustomSwiper
-                url={
-                    "https://65bbca8152189914b5bd1262.mockapi.io/swiper-items?page=3&limit=8"
-                }
-                delay={2500}
-                direction={true}
-            />
-            <CustomSwiper
-                url={
-                    "https://65bbca8152189914b5bd1262.mockapi.io/swiper-items?page=4&limit=8"
-                }
-                delay={2500}
-                direction={false}
-            />
+            {[...Array(2)].map((_swiper, index) => {
+                const direction = index % 2 === 0 ? false : true;
+                return (
+                    <CustomSwiper
+                        key={index}
+                        url={`https://65c52bc7dae2304e92e4009d.mockapi.io/items?page=${
+                            index + 3
+                        }&limit=8`}
+                        delay={2500}
+                        direction={direction}
+                    />
+                );
+            })}
         </SwiperContainer>
         <section className="support">
             <div className="container">
                 <div className="support-wrapper">
-                    <SupportCard
-                        icon={<CheckroomIcon />}
-                        headline={"How to make an order"}
-                        text={"Detailed instructions for new clients"}
-                    />
-                    <SupportCard
-                        icon={<HelpIcon />}
-                        headline={"Questions and answers"}
-                        text={"All about shipping, returns and duties"}
-                    />
-                    <SupportCard
-                        icon={<SmsIcon />}
-                        headline={"Need help?"}
-                        text={"Contact our customer service"}
-                    />
+                    {Object.keys(supportData).map((key, index) => {
+                        const supportCardData = supportData[key];
+                        return (
+                            <SupportCard
+                                key={index}
+                                icon={supportCardData.icon}
+                                headline={supportCardData.headline}
+                                text={supportCardData.text}
+                            />
+                        );
+                    })}
                 </div>
             </div>
         </section>

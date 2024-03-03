@@ -1,6 +1,8 @@
-import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { ToggleButton, ToggleButtonGroup } from "@mui/material";
+
+import { MouseEvent, useState } from "react";
+
 import { setCurrentCartProduct } from "app/store/slices/cartSlice/cartSlice";
 import { ProductData } from "shared/interfaces";
 
@@ -14,9 +16,26 @@ const ChooseSize = ({ product }: ChooseSizeProps) => {
     const dispatch = useDispatch();
     const [alignment, setAlignment] = useState("");
     const { id, imageUrl, name, color, price, sizes } = product;
+    const productConf = {
+        id,
+        name,
+        image: imageUrl[0],
+        color,
+        price,
+        quantity: 1,
+    };
+
+    const handleClick = (e: MouseEvent<HTMLElement>) => {
+        dispatch(
+            setCurrentCartProduct({
+                ...productConf,
+                size: e.currentTarget.id,
+            })
+        );
+    };
 
     const handleChange = (
-        _event: React.MouseEvent<HTMLElement>,
+        _event: MouseEvent<HTMLElement>,
         newAlignment: string
     ) => {
         setAlignment(newAlignment);
@@ -38,19 +57,7 @@ const ChooseSize = ({ product }: ChooseSizeProps) => {
             {sizes?.map((size, index) => {
                 return (
                     <ToggleButton
-                        onClick={(e) => {
-                            dispatch(
-                                setCurrentCartProduct({
-                                    id,
-                                    name,
-                                    image: imageUrl[0],
-                                    color,
-                                    price,
-                                    size: e.currentTarget.id,
-                                    quantity: 1,
-                                })
-                            );
-                        }}
+                        onClick={handleClick}
                         className="sizes-button"
                         key={index}
                         value={size}

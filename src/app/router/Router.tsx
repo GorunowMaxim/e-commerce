@@ -15,7 +15,6 @@ const ProductProfilePage = lazy(
 const SearchResultPage = lazy(
     () => import("pages/ProductsPages/searchResult/SearchResultPage")
 );
-const Sale = lazy(() => import("pages/sale/Sale"));
 
 import "app/styles/index.scss";
 
@@ -38,7 +37,6 @@ function Router() {
                     <Route index element={<Home />} />
                     <Route path="women" element={<Women />} />
                     <Route path="men" element={<Men />} />
-                    <Route path="sale" element={<Sale />} />
                     <Route
                         path="product/:id"
                         element={<ProductProfilePage />}
