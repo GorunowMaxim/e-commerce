@@ -1,10 +1,11 @@
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+
 import { changeSearchUiState } from "app/store/slices/searchSlice/searchSlice";
 import type { ProductData } from "shared/interfaces";
+import { changeOverlayState } from "app/store/slices/overlaySlice/overlaySlice";
 
 import "./styles.scss";
-import { changeOverlayState } from "app/store/slices/overlaySlice/overlaySlice";
 
 interface SearchItemProps {
     searchItem: ProductData;

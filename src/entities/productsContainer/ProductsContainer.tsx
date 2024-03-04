@@ -1,8 +1,9 @@
+import { useDispatch } from "react-redux";
+
 import { ReactNode } from "react";
+import { changeOverlayState } from "app/store/slices/overlaySlice/overlaySlice";
 
 import "./styles.scss";
-import { changeOverlayState } from "app/store/slices/overlaySlice/overlaySlice";
-import { useDispatch } from "react-redux";
 
 interface ProductsContainerProps {
     dataState: {
@@ -15,27 +16,31 @@ interface ProductsContainerProps {
 }
 
 const ProductsContainer = ({ dataState, children }: ProductsContainerProps) => {
-    const { setFilterState,  setOpenSort } = dataState;
     const dispatch = useDispatch();
+    const { setFilterState, setOpenSort } = dataState;
+
+    const handleClickFilter = () => {
+        setFilterState(true);
+        dispatch(changeOverlayState());
+    };
+    const handleClickSort = () => {
+        setOpenSort(true);
+        dispatch(changeOverlayState());
+    };
+
     return (
         <main className="products-main">
             <div className="container">
                 <section className="products-section">
                     <div className="products-menu">
                         <button
-                            onClick={() => {
-                                setFilterState(true);
-                                dispatch(changeOverlayState());
-                            }}
+                            onClick={handleClickFilter}
                             className="products-menu__button"
                         >
                             filter
                         </button>
                         <button
-                            onClick={() => {
-                                setOpenSort(true);
-                                dispatch(changeOverlayState());
-                            }}
+                            onClick={handleClickSort}
                             className="products-menu__button"
                         >
                             sort

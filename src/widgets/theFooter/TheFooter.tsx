@@ -1,8 +1,9 @@
 import FooterSubscribe from "./footerSubscribe/FooterSubscribe";
 import FooterNavigation from "./footerNavigation/FooterNavigation";
+import FooterAccordion from "./footerAccordion/FooterAccordion";
 
 import "./styles.scss";
-import FooterAccordion from "./footerAccordion/FooterAccordion";
+
 
 const TheFooter = () => {
     return (

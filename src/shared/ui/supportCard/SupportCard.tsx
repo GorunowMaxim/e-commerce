@@ -1,12 +1,15 @@
-import { Link } from "react-router-dom";
 import { SvgIconProps } from "@mui/material";
+import { Link } from "react-router-dom";
+
+import { ReactElement } from "react";
 
 import './styles.scss'
+
 
 interface SupportCard {
     headline: string;
     text: string;
-    icon: React.ReactElement<SvgIconProps>;
+    icon: ReactElement<SvgIconProps>;
 }
 
 const SupportCard = ({ headline, text, icon }: SupportCard) => {

@@ -1,5 +1,9 @@
+import cn from "classnames";
+import debounce from "lodash.debounce";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
+
+import { ChangeEvent, KeyboardEvent, useEffect, useRef } from "react";
 import { AppDispatch, RootState } from "app/store/store";
 import {
     changeSearchUiState,
@@ -7,19 +11,16 @@ import {
     setCurrentSearchValue,
 } from "app/store/slices/searchSlice/searchSlice";
 import { changeOverlayState } from "app/store/slices/overlaySlice/overlaySlice";
-
-import { useNavigate } from "react-router-dom";
-
-import cn from "classnames";
-import debounce from "lodash.debounce";
-
-
-import "./styles.scss";
 import searchIcon from "/public/images/search.svg";
 import Close from "@mui/icons-material/Close";
 import SearchItem from "entities/searchItem/SearchItem";
 import CircleLoading from "shared/ui/circleLoading/CircleLoading";
-import { clearFilterProperties, fetchingProducts } from "app/store/slices/productsSlice/productsSlice";
+import {
+    clearFilterProperties,
+    fetchingProducts,
+} from "app/store/slices/productsSlice/productsSlice";
+
+import "./styles.scss";
 
 interface SearchProps {
     setOverlayState: (boolean: boolean) => void;
@@ -42,12 +43,41 @@ const Search = ({ setOverlayState }: SearchProps) => {
     const { category } = useSelector((state: RootState) => state.categories);
     const debouncedDispatch = debounce(
         (value: string) => dispatch(fetchingSearchProducts({ url, value })),
-        550
+        750
     );
 
     useEffect(() => {
         if (inputRef.current) inputRef.current.focus();
     });
+
+    const onChangeInput = (e: ChangeEvent<HTMLInputElement>) => {
+        const value = e.target.value;
+        debouncedDispatch(value);
+        dispatch(setCurrentSearchValue(value));
+    };
+
+    const onKeyDownInput = (e: KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === "Enter") {
+            dispatch(changeSearchUiState());
+            dispatch(changeOverlayState());
+            dispatch(clearFilterProperties());
+            setOverlayState(false);
+            dispatch(
+                fetchingProducts({
+                    url,
+                    category,
+                    currentSearchValue,
+                })
+            );
+            navigate("/search-result");
+        }
+    };
+
+    const searchButtonclick = () => {
+        dispatch(changeSearchUiState());
+        dispatch(changeOverlayState());
+        setOverlayState(false);
+    };
 
     const dispatch = useDispatch<AppDispatch>();
     return (
@@ -63,38 +93,18 @@ const Search = ({ setOverlayState }: SearchProps) => {
                                 <div className="search-icon">
                                     <img src={searchIcon} alt="" />
                                 </div>
-                                <label
-                                    htmlFor=""
-                                    className="search-header__label"
-                                >
+                                <label className="search-header__label">
                                     <input
                                         ref={inputRef}
-                                        onKeyDown={(e) => {
-                                            if (e.key === "Enter") {
-                                                dispatch(changeSearchUiState());
-                                                dispatch(changeOverlayState());
-                                                dispatch(clearFilterProperties());
-                                                setOverlayState(false);
-                                                dispatch(fetchingProducts({ url, category, currentSearchValue }));
-                                                navigate("/search-result");
-                                            }
-                                        }}
-                                        onChange={(e) => {
-                                            const value = e.target.value;
-                                            debouncedDispatch(value);
-                                            dispatch(setCurrentSearchValue(value));
-                                        }}
+                                        onKeyDown={onKeyDownInput}
+                                        onChange={onChangeInput}
                                         type="text"
                                         className="search-header__input"
                                         placeholder="search"
                                     />
                                     <button
                                         type="button"
-                                        onClick={() => {
-                                            dispatch(changeSearchUiState());
-                                            dispatch(changeOverlayState());
-                                            setOverlayState(false);
-                                        }}
+                                        onClick={searchButtonclick}
                                         className="search-header__button"
                                     >
                                         <Close />
@@ -126,11 +136,12 @@ const Search = ({ setOverlayState }: SearchProps) => {
                                     <CircleLoading />
                                 </div>
                             )}
-                            {
-                                appStatus === 'error' && (
-                                    <h3 className="error-message">sorry, we have some technical problems, <br /> pls reload page or try later</h3>
-                                )
-                            }
+                            {appStatus === "error" && (
+                                <h3 className="error-message">
+                                    sorry, we have some technical problems,
+                                    <br /> pls reload page or try later
+                                </h3>
+                            )}
                         </div>
                     </div>
                 </div>

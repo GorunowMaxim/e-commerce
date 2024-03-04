@@ -1,4 +1,5 @@
 import cn from "classnames";
+
 import "./styles.scss";
 
 type ShapeTypes = "square" | "rectangle";

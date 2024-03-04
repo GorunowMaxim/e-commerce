@@ -1,8 +1,7 @@
-import { ReactNode, useState } from "react";
-
 import { Swiper } from "swiper/react";
-import SwiperCore from 'swiper';
+import SwiperCore from "swiper";
 
+import { ReactNode, useState } from "react";
 
 import "swiper/css";
 import "swiper/css/free-mode";

@@ -7,7 +7,7 @@ import type { RenderProductProps } from "shared/interfaces";
 
 import Filter from "widgets/filter/Filter";
 import Sort from "features/sort/Sort";
-import ProductsContainer from "shared/ui/productsContainer/ProductsContainer";
+import ProductsContainer from "entities/productsContainer/ProductsContainer";
 
 import "../styles.scss";
 

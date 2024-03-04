@@ -1,6 +1,14 @@
-import ContainerFilterCategory from "entities/containerFilterCategory/ContainerFilterCategory";
+import cn from "classnames";
+import { useDispatch, useSelector } from "react-redux";
 
-import "./styles.scss";
+import { useState } from "react";
+import { AppDispatch, RootState } from "app/store/store";
+
+import ContainerFilterCategory from "entities/containerFilterCategory/ContainerFilterCategory";
+import RadioButton from "shared/ui/radioButton/RadioButton";
+import ChangePrice from "features/changePrice/ChangePrice";
+import CloseButton from "shared/ui/closeButton/CloseButton";
+import { changeOverlayState } from "app/store/slices/overlaySlice/overlaySlice";
 import {
     changeFilterConfigBrand,
     changeFilterConfigColor,
@@ -8,38 +16,44 @@ import {
     clearFilterProperties,
     fetchingProducts,
 } from "app/store/slices/productsSlice/productsSlice";
-import { useDispatch, useSelector } from "react-redux";
-import { AppDispatch, RootState } from "app/store/store";
-import cn from "classnames";
-import CloseIcon from "@mui/icons-material/Close";
-import { useState } from "react";
-import RadioButton from "shared/ui/radioButton/RadioButton";
-import ChangePrice from "features/changePrice/ChangePrice";
-import { changeOverlayState } from "app/store/slices/overlaySlice/overlaySlice";
 
-const optionValues: { [index: string]: string[] } = {
-    brands: [
-        "Levis",
-        "Isabel Marant",
-        "Paco Rabanne",
-        "Sporty & Rich",
-        "Nanushka Hollie",
-        "Daily Paper",
-        "OPEN YY",
-        "KNWLS",
-    ],
-    colors: [
-        "green",
-        "black",
-        "white",
-        "blue",
-        "brown",
-        "beidge",
-        "yellow",
-        "grey",
-    ],
-    sizes: ["xs", "s", "m", "l", "xl", "xxl"],
-};
+import "./styles.scss";
+
+const brands: string[] = [
+    "Levis",
+    "Isabel Marant",
+    "Paco Rabanne",
+    "Sporty & Rich",
+    "Nanushka Hollie",
+    "Daily Paper",
+    "OPEN YY",
+    "KNWLS",
+];
+
+const colors: string[] = [
+    "green",
+    "black",
+    "white",
+    "blue",
+    "brown",
+    "beidge",
+    "yellow",
+    "grey",
+];
+
+const sizes: string[] = ["xs", "s", "m", "l", "xl", "xxl"];
+
+type onClickFunction = (str: string) => { type: string; payload: string };
+
+interface OptionValues {
+    [index: string]: {
+        data: string[];
+        name: string;
+        selecteEl: string;
+        onChange: (str: string) => void;
+        onClick: onClickFunction;
+    };
+}
 
 interface FilterProps {
     url: string;
@@ -48,127 +62,127 @@ interface FilterProps {
 }
 
 const Filter = ({ url, filterState, setFilterState }: FilterProps) => {
+    const dispatch = useDispatch<AppDispatch>();
     const { currentSearchValue } = useSelector(
         (state: RootState) => state.search
     );
+    const { category } = useSelector((state: RootState) => state.categories);
+
     const [selectedBrand, setSelectedStateBrand] = useState("");
     const [selectedColor, setSelectedStateColor] = useState("");
     const [selectedSize, setSelectedStateSize] = useState("");
-    const [value, setValue] = useState<number[]>([0, 1000]);
-    const dispatch = useDispatch<AppDispatch>();
+    const [value, setValue] = useState([0, 1000]);
 
-    const { category } = useSelector((state: RootState) => state.categories);
+    const handleClickRadioButton = (func: onClickFunction, elem: string) => {
+        dispatch(func(elem));
+        dispatch(
+            fetchingProducts({
+                url,
+                category,
+                currentSearchValue,
+            })
+        );
+    };
+
+    const handleClickClearButton = () => {
+        setSelectedStateColor("");
+        setSelectedStateSize("");
+        setSelectedStateBrand("");
+        setValue([0, 1000]);
+        dispatch(clearFilterProperties());
+        dispatch(
+            fetchingProducts({
+                url,
+                category,
+                currentSearchValue,
+            })
+        );
+    };
+
+    const handleClickCloseButton = () => {
+        dispatch(changeOverlayState());
+        setFilterState(false);
+    };
+
+    const optionValues: OptionValues = {
+        brands: {
+            data: brands,
+            name: "Brands",
+            selecteEl: selectedBrand,
+            onChange: setSelectedStateBrand,
+            onClick: changeFilterConfigBrand,
+        },
+        colors: {
+            data: colors,
+            name: "Colors",
+            selecteEl: selectedColor,
+            onChange: setSelectedStateColor,
+            onClick: changeFilterConfigColor,
+        },
+        sizes: {
+            data: sizes,
+            name: "Sizes",
+            selecteEl: selectedSize,
+            onChange: setSelectedStateSize,
+            onClick: changeFilterConfigSize,
+        },
+    };
+
     return (
         <div className={cn(filterState ? "filter filter_open" : "filter")}>
             <div className="close-button-wrapper">
-                <button
-                    onClick={() => {
-                        dispatch(changeOverlayState());
-                        setFilterState(false);
-                    }}
+                <CloseButton
                     className="close-button"
-                >
-                    <CloseIcon />
-                </button>
+                    onClick={handleClickCloseButton}
+                />
             </div>
             <div className="filter-wrapper">
-                <ContainerFilterCategory nameCategory="Brands">
-                    <div className="filter-form filter-form_flex">
-                        {optionValues.brands.map((brand, index) => {
-                            return (
-                                <RadioButton
-                                    key={index}
-                                    variant="square"
-                                    value={brand}
-                                    currentValue={selectedBrand}
-                                    onChange={setSelectedStateBrand}
-                                    onClick={() => {
-                                        dispatch(
-                                            changeFilterConfigBrand(brand)
-                                        );
-                                        dispatch(
-                                            fetchingProducts({
-                                                url,
-                                                category,
-                                                currentSearchValue,
-                                            })
-                                        );
-                                    }}
-                                />
-                            );
-                        })}
-                    </div>
-                </ContainerFilterCategory>
-                <ContainerFilterCategory nameCategory="Colors">
-                    <div className="filter-form filter-form_flex">
-                        {optionValues.colors.map((color, index) => {
-                            return (
-                                <RadioButton
-                                    key={index}
-                                    variant="square"
-                                    value={color}
-                                    currentValue={selectedColor}
-                                    onChange={setSelectedStateColor}
-                                    onClick={() => {
-                                        dispatch(
-                                            changeFilterConfigColor(color)
-                                        );
-                                        dispatch(
-                                            fetchingProducts({
-                                                url,
-                                                category,
-                                                currentSearchValue,
-                                            })
-                                        );
-                                    }}
-                                />
-                            );
-                        })}
-                    </div>
-                </ContainerFilterCategory>
-                <ContainerFilterCategory nameCategory="sizes">
-                    <div className="filter-form filter-form_grid">
-                        {optionValues.sizes.map((size, index) => {
-                            return (
-                                <RadioButton
-                                    key={index}
-                                    variant="rectangle"
-                                    value={size}
-                                    currentValue={selectedSize}
-                                    onChange={setSelectedStateSize}
-                                    onClick={() => {
-                                        dispatch(changeFilterConfigSize(size));
-                                        dispatch(
-                                            fetchingProducts({
-                                                url,
-                                                category,
-                                                currentSearchValue,
-                                            })
-                                        );
-                                    }}
-                                />
-                            );
-                        })}
-                    </div>
-                </ContainerFilterCategory>
+                {Object.keys(optionValues).map((key, index) => {
+                    const group = optionValues[key];
+                    return (
+                        <ContainerFilterCategory
+                            key={index}
+                            nameCategory={group.name}
+                        >
+                            <div
+                                className={cn(
+                                    group.name === "Sizes"
+                                        ? "filter-form filter-form_grid"
+                                        : "filter-form filter-form_flex"
+                                )}
+                            >
+                                {group.data.map((elem, index) => {
+                                    return (
+                                        <RadioButton
+                                            key={index}
+                                            variant={
+                                                group.name === "Sizes"
+                                                    ? "rectangle"
+                                                    : "square"
+                                            }
+                                            value={elem}
+                                            currentValue={group.selecteEl}
+                                            onChange={() =>
+                                                group.onChange(elem)
+                                            }
+                                            onClick={() =>
+                                                handleClickRadioButton(
+                                                    group.onClick,
+                                                    elem
+                                                )
+                                            }
+                                        />
+                                    );
+                                })}
+                            </div>
+                        </ContainerFilterCategory>
+                    );
+                })}
                 <ContainerFilterCategory nameCategory="Price" visible={true}>
                     <ChangePrice url={url} value={value} setValue={setValue} />
                 </ContainerFilterCategory>
                 <button
-                    onClick={() => {
-                        setSelectedStateColor("");
-                        setSelectedStateSize("");
-                        setSelectedStateBrand("");
-                        setValue([0, 1000]);
-                        dispatch(clearFilterProperties());
-                        dispatch(
-                            fetchingProducts({
-                                url,
-                                category,
-                                currentSearchValue,
-                            })
-                        );
-                    }}
+                    onClick={handleClickClearButton}
                     className="filter-wrapper__button"
                 >
                     Clear all

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Tabs, Tab } from "@mui/material";
 
-import CustomTabsBox from "shared/ui/customTabsBox/CustomTabsBox";
+import CustomTabsBox from "shared/ui/tabs/customTabsBox/CustomTabsBox";
 
 interface ProductTabs {
     description: string | undefined;

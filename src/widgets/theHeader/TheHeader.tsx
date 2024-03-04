@@ -1,6 +1,7 @@
-import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
+
+import { useState } from "react";
 import { changeSearchUiState } from "app/store/slices/searchSlice/searchSlice";
 import { changeOverlayState } from "app/store/slices/overlaySlice/overlaySlice";
 
@@ -26,6 +27,11 @@ const TheHeader = () => {
     }
     const [overlayState, setOverlayState] = useState(false);
 
+    const handleClickSearchButton = () => {
+        dispatch(changeSearchUiState());
+        dispatch(changeOverlayState());
+        setOverlayState(true);
+    };
 
     const dispatch = useDispatch();
     return (
@@ -43,11 +49,7 @@ const TheHeader = () => {
                             </Link>
                             <div className="header-icons">
                                 <button
-                                    onClick={() => {
-                                        dispatch(changeSearchUiState());
-                                        dispatch(changeOverlayState());
-                                        setOverlayState(true);
-                                    }}
+                                    onClick={handleClickSearchButton}
                                     className="header-search-button"
                                 >
                                     <img src={searchIcon} alt="" />

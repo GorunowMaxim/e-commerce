@@ -8,7 +8,7 @@ import type { RenderProductProps } from "shared/interfaces";
 import Filter from "widgets/filter/Filter";
 import Product from "entities/product/Product";
 import Sort from "features/sort/Sort";
-import ProductsContainer from "shared/ui/productsContainer/ProductsContainer";
+import ProductsContainer from "entities/productsContainer/ProductsContainer";
 import ProductSkeleton from "shared/ui/skeletons/productSkeleton/ProductSkeleton";
 
 import "../styles.scss";
@@ -22,9 +22,12 @@ function renderProduct({ appStatus, searchData }: RenderProductProps) {
                 <ProductSkeleton key={index} />
             ));
         case "success":
-            return searchData && searchData.map((product, index) => (
-                <Product key={index} product={product} />
-            ));
+            return (
+                searchData &&
+                searchData.map((product, index) => (
+                    <Product key={index} product={product} />
+                ))
+            );
         case "error":
             return (
                 <h3 className="error-title">

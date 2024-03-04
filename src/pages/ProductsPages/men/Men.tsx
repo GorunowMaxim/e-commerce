@@ -7,7 +7,7 @@ import ProductSkeleton from "shared/ui/skeletons/productSkeleton/ProductSkeleton
 import "../styles.scss";
 
 
-const url = "https://65ad2e2cadbd5aa31be04ace.mockapi.io/items-female";
+const url = "https://65ad2e2cadbd5aa31be04ace.mockapi.io/items-male";
 
 function renderProduct({ appStatus, source }: RenderProductProps) {
     switch (appStatus) {

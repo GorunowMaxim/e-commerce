@@ -1,8 +1,7 @@
 import { Accordion, AccordionDetails, AccordionSummary } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import CustomTabsBox from "shared/ui/customTabsBox/CustomTabsBox";
-import aboutText from '../../../../../../public/texts/text'
-
+import CustomTabsBox from "shared/ui/tabs/customTabsBox/CustomTabsBox";
+import aboutText from "../../../../../../public/texts/text";
 
 interface AccordionData {
     [index: string]: {
@@ -51,7 +50,7 @@ const accordionData: AccordionData = {
             name: "Made-to-order items",
             info: aboutText.orders.order,
         },
-    }
+    },
 };
 
 const TabsBox = ({
@@ -187,34 +186,34 @@ const TabsBox = ({
             </CustomTabsBox>
             <CustomTabsBox value={value} index={2}>
                 <div className="flex-box">
-                    <h5 className="about-info__headline">Orders and delivery</h5>
+                    <h5 className="about-info__headline">
+                        Orders and delivery
+                    </h5>
                     <div className="about-accordion-block">
-                    {Object.keys(accordionData.orders).map(
-                            (el, index) => {
-                                return (
-                                    <Accordion
-                                        key={index}
-                                        className="about-accordion"
-                                        sx={{
-                                            boxShadow:
-                                                "0px 1px 1px 0px rgba(0,0,0,0.12)",
-                                        }}
+                        {Object.keys(accordionData.orders).map((el, index) => {
+                            return (
+                                <Accordion
+                                    key={index}
+                                    className="about-accordion"
+                                    sx={{
+                                        boxShadow:
+                                            "0px 1px 1px 0px rgba(0,0,0,0.12)",
+                                    }}
+                                >
+                                    <AccordionSummary
+                                        expandIcon={<ExpandMoreIcon />}
+                                        className="about-accordion__header"
+                                        id="panel1-header"
+                                        aria-controls="panel1-content"
                                     >
-                                        <AccordionSummary
-                                            expandIcon={<ExpandMoreIcon />}
-                                            className="about-accordion__header"
-                                            id="panel1-header"
-                                            aria-controls="panel1-content"
-                                        >
-                                            {accordionData.orders[el].name}
-                                        </AccordionSummary>
-                                        <AccordionDetails>
-                                            {accordionData.orders[el].info}
-                                        </AccordionDetails>
-                                    </Accordion>
-                                );
-                            }
-                        )}
+                                        {accordionData.orders[el].name}
+                                    </AccordionSummary>
+                                    <AccordionDetails>
+                                        {accordionData.orders[el].info}
+                                    </AccordionDetails>
+                                </Accordion>
+                            );
+                        })}
                     </div>
                 </div>
             </CustomTabsBox>
