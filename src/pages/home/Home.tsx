@@ -59,8 +59,8 @@ const Home: React.FC = () => (
                 return (
                     <CustomSwiper
                         key={index}
-                        url={`https://65c52bc7dae2304e92e4009d.mockapi.io/items?page=${
-                            index + 3
+                        url={`https://65ad2e2cadbd5aa31be04ace.mockapi.io/items-male?page=${
+                            index + 1
                         }&limit=8`}
                         delay={2500}
                         direction={direction}
